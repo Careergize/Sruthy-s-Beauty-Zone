@@ -1,5 +1,34 @@
 /* Shared white, charcoal and antique-gold styling for the reference layout. */
 .reference-content { --reference-gold: #b58b4d; }
+.motion-reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.65,.3,1); }
+.motion-reveal.motion-visible, .motion-reveal:focus-within { opacity: 1; transform: translateY(0); }
+.category-tile.motion-reveal:nth-child(2), .gallery-tile.motion-reveal:nth-child(3n + 2) { transition-delay: .08s; }
+.category-tile.motion-reveal:nth-child(3), .gallery-tile.motion-reveal:nth-child(3n) { transition-delay: .16s; }
+.reference-content .tile-image img, .reference-content .gallery-tile img { transition: transform .8s cubic-bezier(.2,.65,.3,1); }
+.reference-content .tile-image:hover img, .reference-content .gallery-tile:hover img { transform: scale(1.045); }
+.reference-content .button, .reference-content .about-services-link, .reference-content .faq-contact-link { transition: background .3s ease, color .3s ease, border-color .3s ease; }
+.reference-content .button span, .reference-content .about-services-link span, .reference-content .faq-contact-link span { display: inline-block; transition: transform .3s ease; }
+.reference-content .button:hover span, .reference-content .about-services-link:hover span, .reference-content .faq-contact-link:hover span { transform: translateX(4px); }
+.reference-content .category-filter { transition: background .3s ease, color .3s ease, border-color .3s ease; }
+.reference-content .category-filter:hover { border-color: #b58b4d !important; }
+.reference-content .faq-list details[open] > p { animation: answer-reveal .35s ease both; }
+@keyframes answer-reveal { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .reference-content *, .reference-content *::before, .reference-content *::after { animation: none !important; transition: none !important; }
+  .motion-reveal { opacity: 1; transform: none; }
+  .reference-content .tile-image:hover img, .reference-content .gallery-tile:hover img,
+  .reference-content .button:hover span, .reference-content .about-services-link:hover span, .reference-content .faq-contact-link:hover span { transform: none; }
+}
+.reference-content .sylin-hero .hero-photo > img { animation: hero-background-motion 7s ease-out both; }
+.hero-playback { position: absolute; z-index: 2; right: 7.5%; bottom: 52px; padding: 7px 10px; border: 1px solid #ffffff50; color: #fff; background: #0003; font-size: 10px; cursor: pointer; }
+@keyframes hero-background-motion {
+  from { opacity: .65; transform: scale(1); }
+  12% { opacity: 1; }
+  to { opacity: 1; transform: scale(1.07); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reference-content .sylin-hero .hero-photo > img { animation: none; }
+}
 .reference-about .about-photo-main { object-position: center 28%; }
 .reference-about .about-photo-detail { object-position: center 22%; }
 .reference-content .about-highlights { border: 0; gap: 0; padding: 10px 0; }
@@ -70,6 +99,12 @@
 .reference-content .why-list, .reference-content .why-list article { border-color: #e1ddd5 !important; }
 .reference-content .why-list article > span { color: var(--reference-gold) !important; font-size: 16px; }
 .reference-content .why-list p { font-size: 14px; }
+.reference-content .why-intro { max-width: 340px; font-size: 14px; line-height: 1.9; margin-top: 22px; }
+.reference-content .why-list article { padding: 22px 0; align-items: start; }
+.reference-content .why-list article > span { margin-top: 5px; }
+.reference-content .why-list h3 { margin: 0 0 8px; font: 500 21px/1.35 var(--serif); }
+.reference-content .why-list p { line-height: 1.8; }
+.reference-content .faq-contact-link { display: inline-flex; gap: 16px; margin-top: 20px; color: #a47738 !important; font-size: 13px; text-decoration: none; border-bottom: 1px solid #d5bd98; padding-bottom: 6px; }
 .reference-content .appointment-section { padding: 90px max(24px,calc((100% - 1170px)/2)); gap: 65px; }
 .reference-content .appointment-copy > p:not(.eyebrow) { font-size: 14px; }
 .reference-content .appointment-form label { font-size: 12px; }
@@ -111,3 +146,39 @@
   .reference-content :is(.why-section,.appointment-section,.faq-section) { grid-template-columns: 1fr; gap: 30px; }
 }
 @media (max-width: 400px) { .reference-content .gallery-grid { grid-template-rows: repeat(3,170px); } .reference-content .tile-image { height: 270px; } }
+
+/* A personal, editorial Contact page. */
+.reference-content > .contact-intro { display: grid; grid-template-columns: 1.15fr .85fr; padding: 65px max(24px,calc((100% - 1170px)/2)) 75px; gap: 80px; align-items: center; background: #f7f3ec !important; }
+.contact-breadcrumb { color: #938779; font-size: 11px; letter-spacing: 1px; margin-bottom: 32px; }
+.contact-breadcrumb a { color: #84745e; text-decoration: none; }
+.reference-content .contact-script { color: #b58b4d !important; font: 400 39px/1.2 'Allura', cursive; margin: 0 0 18px; }
+.contact-intro h1 { color: #282521; font: 400 clamp(40px,4.3vw,62px)/1.12 var(--serif); letter-spacing: -1.5px; margin: 0 0 25px; }
+.contact-intro h1 em { color: #ad834a; font-weight: 400; }
+.contact-intro-copy > p:not(.contact-script) { max-width: 440px; font-size: 14px; line-height: 1.9; }
+.contact-jump { display: inline-flex; align-items: center; gap: 35px; margin-top: 22px; padding-bottom: 10px; border-bottom: 1px solid #b58b4d; color: #8f6934; text-decoration: none; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+.contact-intro-photo { position: relative; max-width: 410px; width: 100%; justify-self: end; padding: 0 18px 18px 0; }
+.contact-intro-photo::before { content: ''; position: absolute; inset: 20px 0 0 20px; border: 1px solid #c9ae84; }
+.contact-intro-photo img { position: relative; display: block; width: 100%; height: 430px; object-fit: cover; object-position: center 30%; }
+.contact-intro-photo > span { position: absolute; bottom: 43px; left: -30px; padding: 18px 25px; color: #846334; background: #fff; font: 400 30px/1.2 'Allura', cursive; box-shadow: 0 8px 25px #35250f0c; }
+.reference-content .contact-enquiry { grid-template-columns: .85fr 1.15fr; align-items: start; padding-top: 85px; padding-bottom: 85px; scroll-margin-top: 20px; }
+.reference-content .contact-enquiry h2 { text-transform: none; letter-spacing: -.5px; font-size: 38px; }
+.reference-content .contact-enquiry .appointment-copy > p { max-width: 350px; }
+.contact-steps { margin-top: 28px; }
+.contact-steps article { display: flex; align-items: start; gap: 18px; padding: 18px 0; border-bottom: 1px solid #eee9e1; }
+.contact-steps article > span { padding-top: 4px; color: #b58b4d; font: 400 16px var(--serif); }
+.contact-steps h3 { margin: 0 0 6px; font: 500 18px/1.4 var(--serif); }
+.reference-content .contact-steps p { max-width: 320px; margin: 0; font-size: 12px; line-height: 1.8; }
+.reference-content .contact-enquiry .appointment-form { padding: 35px; border: 1px solid #eee7dc; background: #fff; box-shadow: 0 12px 45px #30200a08; gap: 24px; }
+.reference-content .contact-enquiry .appointment-form label {
+  background: transparent !important;
+  color: #38332c !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.reference-content .contact-enquiry .appointment-form label > span { color: #a47738 !important; }
+.reference-content .contact-enquiry .appointment-form input[type='date'] { color-scheme: light; }
+.reference-content .contact-enquiry .appointment-form :is(input,select,textarea) { background: #faf8f4 !important; border-color: #e7e0d4 !important; border-radius: 3px; padding: 14px; }
+.reference-content .contact-enquiry .appointment-form > .button { width: 100%; justify-content: space-between; }
+.reference-content .contact-enquiry .form-privacy { margin: 0; font-size: 11px; }
+@media (max-width: 900px) { .reference-content > .contact-intro { gap: 40px; padding: 55px 6%; } .contact-intro-photo img { height: 380px; } }
+@media (max-width: 760px) { .reference-content > .contact-intro { grid-template-columns: 1fr; gap: 35px; padding: 40px 7% 55px; } .contact-intro h1 { font-size: clamp(38px,8vw,54px); } .contact-intro-photo { justify-self: center; } .contact-intro-photo > span { left: -10px; font-size: 27px; } .reference-content .contact-enquiry { grid-template-columns: 1fr; padding: 55px 7%; gap: 30px; } .reference-content .contact-enquiry .appointment-form { padding: 24px 20px; } }
