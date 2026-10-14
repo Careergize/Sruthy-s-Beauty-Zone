@@ -1,0 +1,113 @@
+/* Shared white, charcoal and antique-gold styling for the reference layout. */
+.reference-content { --reference-gold: #b58b4d; }
+.reference-about .about-photo-main { object-position: center 28%; }
+.reference-about .about-photo-detail { object-position: center 22%; }
+.reference-content .about-highlights { border: 0; gap: 0; padding: 10px 0; }
+.reference-content .about-highlights > div { padding: 4px 28px 4px 0; }
+.reference-content .about-highlights > div + div { border-left: 1px solid #e8e1d5; padding-left: 28px; }
+.reference-content .about-highlights strong { display: block; color: #b58b4d !important; font: 400 52px/1 var(--serif); }
+.reference-content .about-highlights p { margin-top: 12px; font-size: 12px; letter-spacing: .4px; }
+.header-overlay.contact-header { position: relative; background: #252525; }
+.contact-header .nav-links > a:first-child { color: #fff !important; }
+.contact-header .nav-links > a[aria-current='page'] { color: #c5a36d !important; }
+.reference-content > section.contact-banner { padding: 65px 24px; text-align: center; background: #f5f1ea !important; }
+.contact-banner > p { font: 400 42px 'Allura', cursive; color: #b58b4d !important; margin: 0 0 12px; }
+.contact-banner h1 { color: #252525; font: 500 clamp(30px,4vw,48px)/1.2 var(--serif); margin: 0 0 22px; }
+.contact-banner a, .contact-banner span { color: #777; font-size: 13px; }
+.contact-banner a { color: #a47738; }
+.reference-content > section:not(.hero-section) { background: #fff !important; color: #252525 !important; }
+.reference-content > section:not(.hero-section) :is(h2,h3,h4,h5,summary,label,strong) { color: #252525 !important; }
+.reference-content > section:not(.hero-section) p { color: #777 !important; }
+.reference-content > section:not(.hero-section) .eyebrow,
+.reference-content .reference-about .about-script { color: var(--reference-gold) !important; font: 400 40px/1.2 'Allura', cursive; letter-spacing: 0; text-transform: none; margin-bottom: 10px; }
+.reference-content > section:not(.hero-section) h2 { font: 500 clamp(28px,3vw,40px)/1.2 var(--serif); text-transform: uppercase; letter-spacing: .3px; }
+.reference-content > section:not(.hero-section) h2 em { font-style: normal; color: #252525 !important; }
+.reference-content :is(.category-section,.services-section,.gallery-section) { padding: 90px max(24px,calc((100% - 1170px)/2)); }
+.reference-content .section-heading { display: block; text-align: center; margin-bottom: 45px; }
+.reference-content .section-heading > p { max-width: 650px; margin: 20px auto 0; font-size: 14px; line-height: 1.8; }
+.reference-content .category-tiles { gap: 30px; }
+.reference-content .tile-image { height: 275px; }
+.reference-content .tile-caption { display: block; padding: 25px 22px; border: 1px solid #eee !important; border-top: 0 !important; text-align: center; background: #fff; }
+.reference-content .tile-caption > span { color: #999 !important; font-size: 9px; }
+.reference-content .tile-caption h3 { font: 500 23px/1.3 var(--serif); margin: 12px 0 20px; }
+.reference-content .tile-caption > button { color: var(--reference-gold) !important; font-size: 11px; margin-bottom: 0; }
+.reference-content .other-categories { margin-top: 35px; border-color: #e8e5df !important; }
+.reference-content .other-categories button { color: #555 !important; font-size: 12px; }
+.reference-content .other-categories button :is(span,b) { color: var(--reference-gold) !important; }
+.reference-content .other-categories button + button { border-color: #e8e5df !important; }
+.reference-content .occasion-section { background: #f7f7f7 !important; min-height: 540px; }
+.reference-content .occasion-copy { padding: 70px 12%; }
+.reference-content .occasion-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.9; }
+.reference-content .occasion-photo { min-height: 540px; }
+.reference-content .occasion-photo > span { color: #555 !important; background: #ffffffeb; }
+.reference-content .occasion-labels { left: 12%; color: #999 !important; }
+.reference-content .occasion-labels span { color: #888 !important; }
+.reference-content .occasion-labels i { background: var(--reference-gold); }
+.reference-content .button-raspberry { background: var(--reference-gold) !important; color: #fff !important; border: 1px solid var(--reference-gold) !important; font-size: 11px; padding: 17px 24px; }
+.reference-content .button-raspberry span { color: #fff !important; }
+.reference-content .button-raspberry:hover { background: #967038 !important; }
+.reference-content .service-browser { display: flex; flex-direction: column; gap: 35px; border: 0 !important; padding: 0; }
+.reference-content .service-categories { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.reference-content .category-filter { width: auto; min-width: 0; display: block; border: 1px solid #e5e1d9 !important; background: #fff; color: #555 !important; padding: 13px 18px; font-size: 12px; }
+.reference-content .category-filter > :is(span,b) { display: none; }
+.reference-content .category-filter.active { padding: 13px 18px; background: var(--reference-gold); border-color: var(--reference-gold) !important; color: #fff !important; }
+.reference-content .service-intro { border: 0 !important; padding-bottom: 24px; }
+.reference-content .service-intro > div > span { color: var(--reference-gold) !important; }
+.reference-content .service-intro h3 { font: 500 25px var(--serif); }
+.reference-content .service-intro > p { font-size: 13px; max-width: 420px; }
+.reference-content .service-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 45px; }
+.reference-content .service-row { grid-template-columns: 1fr auto; border: 0 !important; border-bottom: 1px dashed #ddd !important; padding: 20px 0; align-items: center; }
+.reference-content .service-number { display: none; }
+.reference-content .service-row h4 { font: 500 19px/1.4 var(--serif); }
+.reference-content .service-row p { font-size: 12px; line-height: 1.7; margin-top: 5px; }
+.reference-content .service-row > button { color: var(--reference-gold) !important; font-size: 10px; }
+.reference-content .service-note { text-align: center; margin-top: 30px; font-size: 12px; }
+.reference-content .gallery-grid { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: repeat(2,300px); gap: 25px; }
+.reference-content .gallery-tile { grid-column: span 1; }
+.reference-content .gallery-tile > span { color: #fff !important; font: 500 20px var(--serif); left: 20px; bottom: 20px; }
+.reference-content .gallery-tile > span i { color: #dec395 !important; }
+.reference-content .why-section { padding: 65px max(24px,calc((100% - 1170px)/2)); background: #f7f7f7 !important; gap: 65px; }
+.reference-content .why-list, .reference-content .why-list article { border-color: #e1ddd5 !important; }
+.reference-content .why-list article > span { color: var(--reference-gold) !important; font-size: 16px; }
+.reference-content .why-list p { font-size: 14px; }
+.reference-content .appointment-section { padding: 90px max(24px,calc((100% - 1170px)/2)); gap: 65px; }
+.reference-content .appointment-copy > p:not(.eyebrow) { font-size: 14px; }
+.reference-content .appointment-form label { font-size: 12px; }
+.reference-content .appointment-form label :is(span,small) { color: #888 !important; }
+.reference-content .appointment-form :is(input,select,textarea) { background: #f7f7f7 !important; color: #333 !important; border: 1px solid #e7e7e7 !important; padding: 13px 14px; font-size: 13px; }
+.reference-content .appointment-form :is(input,select,textarea):focus { border-color: var(--reference-gold) !important; box-shadow: none !important; }
+.reference-content .form-confirmation { background: #f5efe5 !important; border-color: var(--reference-gold) !important; color: #555 !important; }
+.reference-content .form-error { color: #a12e2e !important; }
+.reference-content .faq-section { padding: 65px max(24px,calc((100% - 1170px)/2)); background: #f7f7f7 !important; gap: 65px; }
+.reference-content .faq-title > p, .reference-content .faq-list details > p { font-size: 13px; }
+.reference-content .faq-list details { border-color: #ddd !important; }
+.reference-content .faq-list summary { font-size: 13px; }
+.reference-content .faq-list summary > :is(span,b) { color: var(--reference-gold) !important; }
+.site-footer { background: #252525 !important; padding: 55px max(24px,calc((100% - 1170px)/2)); border-top: 3px solid #b58b4d; }
+.site-footer .brand-name, .site-footer nav a, .site-footer > p { color: #eee !important; }
+.site-footer .brand-name b, .site-footer .footer-note { color: #c5a36d !important; }
+.reference-content :where(a,button,input,select,textarea,summary):focus-visible { outline-color: #b58b4d !important; }
+@media (max-width: 900px) {
+  .reference-content :is(.category-section,.services-section,.gallery-section,.why-section,.appointment-section,.faq-section) { padding: 65px 6%; }
+  .reference-content .category-tiles { gap: 18px; }
+  .reference-content .tile-image { height: 240px; }
+  .reference-content .tile-caption { padding: 20px 12px; }
+  .reference-content .gallery-grid { grid-template-rows: repeat(2,240px); gap: 16px; }
+}
+@media (max-width: 760px) {
+  .reference-content .category-tiles { grid-template-columns: 1fr; gap: 25px; }
+  .reference-content .tile-image { height: 330px; }
+  .reference-content .section-heading h2 { font-size: 30px; }
+  .reference-content .other-categories { align-items: stretch; }
+  .reference-content .service-categories { overflow: visible; }
+  .reference-content .category-filter { font-size: 11px; padding: 11px 13px; }
+  .reference-content .category-filter.active { padding: 11px 13px; }
+  .reference-content .service-list { grid-template-columns: 1fr; }
+  .reference-content .service-row > button { position: static; }
+  .reference-content .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(3,220px); }
+  .reference-content .gallery-tile > span { font-size: 15px; left: 12px; bottom: 14px; }
+  .reference-content .occasion-copy { padding: 55px 7% 75px; }
+  .reference-content .occasion-photo { min-height: 400px; height: 400px; }
+  .reference-content :is(.why-section,.appointment-section,.faq-section) { grid-template-columns: 1fr; gap: 30px; }
+}
+@media (max-width: 400px) { .reference-content .gallery-grid { grid-template-rows: repeat(3,170px); } .reference-content .tile-image { height: 270px; } }

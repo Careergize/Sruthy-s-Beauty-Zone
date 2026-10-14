@@ -1,8 +1,14 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { categories, photos, services, type ServiceCategory } from './services'
 import './App.css'
+import './Reference.css'
 
 const navItems = [['Home', 'home'], ['About', 'about'], ['Services', 'services'], ['Bridal', 'bridal'], ['Gallery', 'gallery'], ['Contact', 'contact']] as const
+const heroSlides = [
+  { image: '/images/makeup-artistry.png', alt: 'A makeup artist carefully applying eye makeup', script: 'Discover Your Beauty', title: 'A little care.', finish: 'A beautiful you.', copy: 'Makeup, skin care and beauty rituals, made personal.', category: 'Skin & Facials' },
+  { image: '/images/bridal-makeup.png', alt: 'A bride wearing traditional gold jewellery and bridal makeup', script: 'Your Moment to Shine', title: 'For your day.', finish: 'For every memory.', copy: 'Bridal makeup and occasion styling for your special moments.', category: 'Bridal & Makeup' },
+  { image: '/images/hair-styling2.png', alt: 'Professional hairstyling in a beauty salon', script: 'Find Your Signature Style', title: 'Beautiful hair.', finish: 'Beautiful confidence.', copy: 'Fresh cuts, thoughtful hair care and a finish that feels like you.', category: 'Hair & Styling' },
+] as const
 const categoryCopy: Record<ServiceCategory, string> = {
   'Skin & Facials': 'Thoughtful skin care, facial rituals and everyday grooming.',
   'Hair & Styling': 'A fresh shape, a smooth blowout or a style for every day.',
@@ -23,9 +29,38 @@ function Eyebrow({ children, light = false }: { children: string; light?: boolea
 }
 
 function App() {
+  const isContactPage = /^\/contact(?:\.html)?\/?$/.test(window.location.pathname)
+  const pageLink = (id: string) => id === 'contact' ? '/contact.html' : `${isContactPage ? '/' : ''}#${id}`
+  const [heroSlide, setHeroSlide] = useState(0)
+  const hero = heroSlides[heroSlide]
+  useEffect(() => {
+    const loader = document.getElementById('site-loader')
+    if (!loader) return
+    let revealTimer: number | undefined
+    let removeTimer: number | undefined
+    const reveal = () => {
+      const minimumDuration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1400
+      revealTimer = window.setTimeout(() => {
+        loader.classList.add('is-finished')
+        loader.setAttribute('aria-hidden', 'true')
+        removeTimer = window.setTimeout(() => loader.remove(), 650)
+      }, Math.max(0, minimumDuration - performance.now()))
+    }
+    if (document.readyState === 'complete') reveal()
+    else window.addEventListener('load', reveal, { once: true })
+    return () => {
+      window.removeEventListener('load', reveal)
+      window.clearTimeout(revealTimer)
+      window.clearTimeout(removeTimer)
+    }
+  }, [])
+
   const [activeCategory, setActiveCategory] = useState<ServiceCategory>('Skin & Facials')
   const [menuOpen, setMenuOpen] = useState(false)
-  const [selectedService, setSelectedService] = useState('')
+  const [selectedService, setSelectedService] = useState(() => {
+    const requested = new URLSearchParams(window.location.search).get('service') ?? ''
+    return services.some((service) => service.name === requested) ? requested : ''
+  })
   const [formError, setFormError] = useState('')
   const [confirmation, setConfirmation] = useState(false)
   const [activePhoto, setActivePhoto] = useState<number | null>(null)
@@ -64,10 +99,7 @@ function App() {
   }
 
   function chooseService(name = '') {
-    setSelectedService(name)
-    setConfirmation(false)
-    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
-    document.querySelector('#contact')?.scrollIntoView({ behavior })
+    window.location.assign(`/contact.html${name ? `?service=${encodeURIComponent(name)}` : ''}`)
   }
 
   function submitEnquiry(event: FormEvent<HTMLFormElement>) {
@@ -105,21 +137,52 @@ function App() {
   }
 
   return <>
-    <div className="announcement">BEAUTY <span>•</span> CARE <span>•</span> SPECIAL MOMENTS</div>
-    <header className="site-header" id="home">
-      <a className="wordmark" href="#home" aria-label="Sruthy Lakshmi’s Beauty Zone home"><span className="brand-name">Sruthy Lakshmi’s<b>Beauty Zone</b></span></a>
-      <button className={`menu-toggle${menuOpen ? ' is-open' : ''}`} aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
+    <div className={`header-overlay${isContactPage ? ' contact-header' : ''}`} id="home">
+    <header className="site-header reference-header">
+      <a className="wordmark" href={pageLink('home')} aria-label="Sruthy Lakshmi’s Beauty Zone home"><span className="nav-logo-emblem" aria-hidden="true"><img src="/images/beauty-zone-logo.png" alt="" /></span><span className="brand-name">Sruthy Lakshmi’s<b>Beauty Zone</b></span></a>
+      <button className={`menu-toggle${menuOpen ? ' is-open' : ''}`} aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(!menuOpen)}><span /><span /><span /></button>
       <nav id="primary-navigation" className={menuOpen ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
-        {navItems.map(([label, id]) => <a href={`#${id}`} key={id} onClick={() => setMenuOpen(false)}>{label}</a>)}
-        <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Enquire now <span aria-hidden="true">↗</span></a>
+        {navItems.map(([label, id]) => <a href={pageLink(id)} key={id} aria-current={isContactPage && id === 'contact' ? 'page' : undefined} onClick={() => setMenuOpen(false)}>{label}</a>)}
       </nav>
     </header>
+    </div>
 
-    <main>
-      <section className="hero-section" aria-labelledby="hero-title">
-        <div className="hero-photo"><img src={photos.hero.src} alt={photos.hero.alt} fetchPriority="high" /><div className="hero-shade" /></div><div className="hero-copy"><Eyebrow light>BEAUTY · CARE · OCCASIONS</Eyebrow><h1 id="hero-title">Feel beautiful.<br /><em>In every moment.</em></h1><p>From everyday beauty rituals to bridal and special-occasion preparation, discover a complete range of beauty services in one welcoming place.</p><div className="hero-actions"><button className="button button-raspberry" onClick={() => scrollToServices()}>Explore services <span aria-hidden="true">↘</span></button><a className="hero-secondary" href="#contact">Enquire now <span aria-hidden="true">↗</span></a></div></div><span className="hero-caption">SRUTHY LAKSHMI’S BEAUTY ZONE <i /> BEAUTY FOR EVERY MOMENT</span><span className="hero-counter">01 <i /> 04</span></section>
+    <main className="reference-content">
+      {!isContactPage && <>
+      <section className="hero-section sylin-hero" aria-labelledby="hero-title" aria-roledescription="carousel">
+        <div className="hero-photo"><img key={hero.image} src={hero.image} alt={hero.alt} fetchPriority="high" /><div className="hero-shade" /></div>
+        <div className="hero-copy" key={heroSlide}>
+          <p className="hero-script eyebrow">{hero.script}</p>
+          <h1 id="hero-title">{hero.title}<br />{hero.finish}</h1>
+          <p>{hero.copy}</p>
+          <div className="hero-actions"><button className="button hero-outline" onClick={() => scrollToServices(hero.category)}>Explore our services <span aria-hidden="true">→</span></button></div>
+        </div>
+        <button className="hero-arrow hero-prev" aria-label="Previous hero slide" onClick={() => setHeroSlide((heroSlide + heroSlides.length - 1) % heroSlides.length)}>‹</button>
+        <button className="hero-arrow hero-next" aria-label="Next hero slide" onClick={() => setHeroSlide((heroSlide + 1) % heroSlides.length)}>›</button>
+        <div className="hero-dots" role="group" aria-label="Choose hero slide">{heroSlides.map((slide, index) => <button key={slide.script} className={index === heroSlide ? 'active' : ''} aria-label={`Show ${slide.script}`} aria-pressed={index === heroSlide} onClick={() => setHeroSlide(index)} />)}</div>
+        <span className="hero-caption">SRUTHY LAKSHMI’S BEAUTY ZONE <i /> BEAUTY FOR EVERY MOMENT</span>
+        <span className="hero-counter">0{heroSlide + 1} <i /> 03</span>
+      </section>
 
-      <section className="category-section" aria-labelledby="category-title"><div className="section-heading"><div><Eyebrow>EXPLORE BY CATEGORY</Eyebrow><h2 id="category-title">Beauty, <em>your way.</em></h2></div><p>From little everyday rituals to the moments you want to remember, find the care that feels right for you.</p></div><div className="category-tiles">
+      <section className="experience-section reference-about" id="about" aria-labelledby="about-title">
+        <div className="about-photo-stack">
+          <img className="about-photo-main" src="/images/kerala-bride-saree.jpg" alt="Bride in a cream-and-red saree with traditional gold jewellery and jasmine flowers" loading="lazy" />
+          <img className="about-photo-detail" src="/images/kerala-bride-portrait.jpg" alt="Smiling bride in a red saree wearing gold jewellery" loading="lazy" />
+          <span className="about-photo-label">Beauty begins with you</span>
+        </div>
+        <div className="experience-copy">
+          <p className="about-script">About Us</p>
+          <h2 id="about-title">We understand<br />your style.</h2>
+          <p>At Sruthy Lakshmi’s Beauty Zone, beauty is personal. From a fresh hairstyle and a relaxing facial to makeup for your special day, explore care that fits your style and your occasion.</p>
+          <p>Take a moment for yourself. Discover our range of skin, hair, nail and bridal beauty services, all in one welcoming place.</p>
+          <div className="about-highlights">
+            <div><div><strong>{categories.length}</strong><p>Beauty categories</p></div></div>
+            <div><div><strong>{services.length}</strong><p>Services to explore</p></div></div>
+          </div>
+          <a className="about-services-link" href={pageLink('services')}>Discover our services <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section className="category-section" aria-labelledby="category-title"><div className="section-heading"><div><Eyebrow>Welcome</Eyebrow><h2 id="category-title">Explore our services</h2></div><p>From little everyday rituals to the moments you want to remember, find the care that feels right for you.</p></div><div className="category-tiles">
         <article className="category-tile skin-tile"><button className="tile-image" onClick={() => scrollToServices('Skin & Facials')} aria-label="Explore skin and beauty services"><img src={photos.skinTile.src} alt={photos.skinTile.alt} loading="lazy" /></button><div className="tile-caption"><span>01 / THE SKIN EDIT</span><h3>Skin & Beauty</h3><button onClick={() => scrollToServices('Skin & Facials')}>Explore <b aria-hidden="true">↗</b></button></div></article>
         <article className="category-tile hair-tile"><button className="tile-image" onClick={() => scrollToServices('Hair & Styling')} aria-label="Explore hair and styling services">
 <img
@@ -130,31 +193,38 @@ function App() {
 </button><div className="tile-caption"><span>02 / HAIR & FINISHING</span><h3>Hair & Styling</h3><button onClick={() => scrollToServices('Hair & Styling')}>Explore <b aria-hidden="true">↗</b></button></div></article>
         <article className="category-tile bridal-tile"><button className="tile-image" onClick={() => scrollToServices('Bridal & Makeup')} aria-label="Explore bridal and occasion services">
 <img
-  src="/images/bridal-makeup.png"
-  alt="Kerala bride with natural bridal makeup and traditional gold jewellery"
+src="/images/bridal-eye-makeup.png"
+  alt="Bride in a red-and-gold saree having her eye makeup applied"
   loading="lazy"
 />
 </button><div className="tile-caption"><span>03 / FOR YOUR OCCASION</span><h3>Bridal & Occasions</h3><button onClick={() => scrollToServices('Bridal & Makeup')}>Explore <b aria-hidden="true">↗</b></button></div></article>
       </div><div className="other-categories" aria-label="More beauty categories">{(['Nails & Feet', 'Body Care & Wellness', 'At-Home Beauty'] as ServiceCategory[]).map((category, index) => <button key={category} onClick={() => scrollToServices(category)}><span>0{index + 4}</span>{category}<b aria-hidden="true">↗</b></button>)}</div></section>
 
-      <section className="experience-section" id="about"><div className="experience-photo"><img src={photos.experience.src} alt={photos.experience.alt} loading="lazy" /><span>THE PARLOUR EXPERIENCE</span></div><div className="experience-copy"><Eyebrow>MORE THAN A BEAUTY ROUTINE</Eyebrow><h2>Everything you need<br />to feel <em>your best.</em></h2><p>Beauty is personal. Explore a thoughtful range of services for your everyday routine, your moments of self-care and the occasions that mean the most.</p><a className="text-link" href="#services">Discover the full service menu <span aria-hidden="true">↗</span></a><div className="experience-note"><span>SKIN</span><i /> <span>HAIR</span><i /> <span>NAILS</span><i /> <span>BODY</span><i /> <span>OCCASIONS</span></div></div></section>
 
-      <section className="services-section" id="services"><div className="section-heading service-heading"><div><Eyebrow>THE COMPLETE MENU</Eyebrow><h2>Find your kind<br />of <em>care.</em></h2></div><p>Explore the services by category. Choose a service to add it to your enquiry.</p></div><div className="service-browser"><div className="service-categories" role="group" aria-label="Filter services by category">{categories.map((category, index) => <button key={category} className={activeCategory === category ? 'category-filter active' : 'category-filter'} aria-pressed={activeCategory === category} onClick={() => setActiveCategory(category)}><span>0{index + 1}</span>{category}<b aria-hidden="true">↗</b></button>)}</div><div className="service-content" aria-live="polite"><div className="service-intro"><div><span>{String(categories.indexOf(activeCategory) + 1).padStart(2, '0')} / SERVICE COLLECTION</span><h3>{activeCategory}</h3></div><p>{categoryCopy[activeCategory]}</p></div><div className="service-list">{services.filter((service) => service.category === activeCategory).map((service, index) => <article className="service-row" key={service.name}><span className="service-number">{String(index + 1).padStart(2, '0')}</span><div><h4>{service.name}</h4><p>{service.description}</p></div><button onClick={() => chooseService(service.name)} aria-label={`Enquire about ${service.name}`}>Add to enquiry <span aria-hidden="true">↗</span></button></article>)}</div><p className="service-note">No prices or treatment promises are listed. Ask about service details in your enquiry.</p></div></div></section>
 
-      <section className="occasion-section" id="bridal"><div className="occasion-copy"><Eyebrow>BRIDAL & SPECIAL MOMENTS</Eyebrow><h2>For the moments<br />that <em>matter.</em></h2><p>From bridal beauty to makeup and styling for special occasions, explore services for the days you want to feel especially confident.</p><button className="button button-raspberry" onClick={() => chooseService('Wedding & Event Preparation')}>Enquire about occasion services <span aria-hidden="true">↗</span></button><div className="occasion-labels"><span>BRIDAL BEAUTY</span><i /> <span>EVENT MAKEUP</span><i /> <span>HAIR & FINISHING</span></div></div><div className="occasion-photo"><img src={photos.occasion.src} alt={photos.occasion.alt} loading="lazy" /><span>FOR THE DAYS YOU WANT TO REMEMBER</span></div></section>
+      <section className="occasion-section" id="bridal"><div className="occasion-copy"><Eyebrow>BRIDAL & SPECIAL MOMENTS</Eyebrow><h2>For the moments<br />that <em>matter.</em></h2><p>From bridal beauty to makeup and styling for special occasions, explore services for the days you want to feel especially confident.</p><button className="button button-raspberry" onClick={() => chooseService('Wedding & Event Preparation')}>Enquire about occasion services <span aria-hidden="true">↗</span></button><div className="occasion-labels"><span>BRIDAL BEAUTY</span><i /> <span>EVENT MAKEUP</span><i /> <span>HAIR & FINISHING</span></div></div><div className="occasion-photo"><img src="/images/bridal-makeup.png" alt={photos.occasion.alt} loading="lazy" /><span>FOR THE DAYS YOU WANT TO REMEMBER</span></div></section>
 
-      <section className="gallery-section" id="gallery"><div className="section-heading"><div><Eyebrow>A CURATED BEAUTY MOODBOARD</Eyebrow><h2>A little beauty<br /><em>inspiration.</em></h2></div><p>Different rituals, different moments. These reference photographs are not images of this specific parlour or its clients.</p></div><div className="gallery-grid">{photos.gallery.map((photo, index) => <button className={`gallery-tile gallery-${index + 1}`} onClick={() => setActivePhoto(index)} key={photo.src} aria-label={`View ${photo.label}: ${photo.alt}`}><img src={photo.src} alt={photo.alt} loading="lazy" /><span><i>0{index + 1}</i>{photo.label}</span><b aria-hidden="true">↗</b></button>)}</div></section>
+      <section className="services-section" id="services"><div className="section-heading service-heading"><div><Eyebrow>Beauty Menu</Eyebrow><h2>Care for every occasion</h2></div><p>Explore the services by category. Choose a service to add it to your enquiry.</p></div><div className="service-browser"><div className="service-categories" role="group" aria-label="Filter services by category">{categories.map((category, index) => <button key={category} className={activeCategory === category ? 'category-filter active' : 'category-filter'} aria-pressed={activeCategory === category} onClick={() => setActiveCategory(category)}><span>0{index + 1}</span>{category}<b aria-hidden="true">↗</b></button>)}</div><div className="service-content" aria-live="polite"><div className="service-intro"><div><span>{String(categories.indexOf(activeCategory) + 1).padStart(2, '0')} / SERVICE COLLECTION</span><h3>{activeCategory}</h3></div><p>{categoryCopy[activeCategory]}</p></div><div className="service-list">{services.filter((service) => service.category === activeCategory).map((service, index) => <article className="service-row" key={service.name}><span className="service-number">{String(index + 1).padStart(2, '0')}</span><div><h4>{service.name}</h4><p>{service.description}</p></div><button onClick={() => chooseService(service.name)} aria-label={`Enquire about ${service.name}`}>Add to enquiry <span aria-hidden="true">↗</span></button></article>)}</div><p className="service-note">No prices or treatment promises are listed. Ask about service details in your enquiry.</p></div></div></section>
+
+
+
+      <section className="gallery-section" id="gallery"><div className="section-heading"><div><Eyebrow>Style & Beauty</Eyebrow><h2>Our beauty gallery</h2></div><p>Different rituals, different moments. These reference photographs are not images of this specific parlour or its clients.</p></div><div className="gallery-grid">{photos.gallery.map((photo, index) => <button className={`gallery-tile gallery-${index + 1}`} onClick={() => setActivePhoto(index)} key={photo.src} aria-label={`View ${photo.label}: ${photo.alt}`}><img src={photo.src} alt={photo.alt} loading="lazy" /><span><i>0{index + 1}</i>{photo.label}</span><b aria-hidden="true">↗</b></button>)}</div></section>
 
       <section className="why-section"><div className="why-title"><Eyebrow>WHY VISIT US</Eyebrow><h2>Beauty with<br /><em>room to choose.</em></h2></div><div className="why-list"><article><span>01</span><p>A range of beauty and personal-care services in one place.</p></article><article><span>02</span><p>Options for everyday care, self-care and special occasions.</p></article><article><span>03</span><p>An easy way to explore the menu and prepare an enquiry.</p></article></div></section>
 
-      <section className="appointment-section" id="contact"><div className="appointment-copy"><Eyebrow>YOUR NEXT STEP</Eyebrow><h2>Let’s plan your<br /><em>beauty visit.</em></h2><p>Share what you’re interested in and how to reach you. This form gives a preview only.</p></div><form className="appointment-form" noValidate onSubmit={submitEnquiry} onChange={() => { setConfirmation(false); setFormError('') }}><div className="form-row"><label htmlFor="name">Full name <span>*</span><input id="name" name="name" autoComplete="name" placeholder="Your name" required /></label><label htmlFor="email">Email address <small>Enter email or phone</small><input id="email" name="email" type="email" autoComplete="email" placeholder="you@example.com" /></label></div><div className="form-row"><label htmlFor="phone">Phone number <small>Enter phone or email</small><input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="Your phone number" /></label><label htmlFor="service">Requested service <span>*</span><select id="service" name="service" value={selectedService} onChange={(event) => setSelectedService(event.target.value)} required><option value="">Choose a service</option>{services.map((service) => <option key={service.name} value={service.name}>{service.name}</option>)}</select></label></div><div className="form-date-row"><label htmlFor="date">Preferred date <span>*</span><input id="date" name="date" type="date" min={today} required /></label></div><label className="message-field" htmlFor="message">Additional message <small>Optional</small><textarea id="message" name="message" rows={3} placeholder="Anything you’d like to ask or share?" /></label>{formError && <p className="form-error" role="alert">{formError}</p>}{confirmation && <div className="form-confirmation" role="status">Thank you for your interest. This is a frontend demonstration only. Your enquiry has not been sent to the parlour, and no appointment has been booked or confirmed.</div>}<button className="button button-raspberry" type="submit">Preview enquiry <span aria-hidden="true">↗</span></button><p className="form-privacy">Demo form · Your enquiry is not sent, and no appointment is booked or confirmed.</p></form></section>
+      </>}
+      {isContactPage && <><section className="contact-banner"><p>Contact Us</p><h1>Let’s plan your beauty visit.</h1><a href="/">Home</a><span> / Contact</span></section><section className="appointment-section" id="contact"><div className="appointment-copy"><Eyebrow>Contact Us</Eyebrow><h2>Let’s plan your<br /><em>beauty visit.</em></h2><p>Share what you’re interested in and how to reach you. This form gives a preview only.</p></div><form className="appointment-form" noValidate onSubmit={submitEnquiry} onChange={() => { setConfirmation(false); setFormError('') }}><div className="form-row"><label htmlFor="name">Full name <span>*</span><input id="name" name="name" autoComplete="name" placeholder="Your name" required /></label><label htmlFor="email">Email address <small>Enter email or phone</small><input id="email" name="email" type="email" autoComplete="email" placeholder="you@example.com" /></label></div><div className="form-row"><label htmlFor="phone">Phone number <small>Enter phone or email</small><input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="Your phone number" /></label><label htmlFor="service">Requested service <span>*</span><select id="service" name="service" value={selectedService} onChange={(event) => setSelectedService(event.target.value)} required><option value="">Choose a service</option>{services.map((service) => <option key={service.name} value={service.name}>{service.name}</option>)}</select></label></div><div className="form-date-row"><label htmlFor="date">Preferred date <span>*</span><input id="date" name="date" type="date" min={today} required /></label></div><label className="message-field" htmlFor="message">Additional message <small>Optional</small><textarea id="message" name="message" rows={3} placeholder="Anything you’d like to ask or share?" /></label>{formError && <p className="form-error" role="alert">{formError}</p>}{confirmation && <div className="form-confirmation" role="status">Thank you for your interest. This is a frontend demonstration only. Your enquiry has not been sent to the parlour, and no appointment has been booked or confirmed.</div>}<button className="button button-raspberry" type="submit">Preview enquiry <span aria-hidden="true">↗</span></button><p className="form-privacy">Demo form · Your enquiry is not sent, and no appointment is booked or confirmed.</p></form></section>
 
+      </>}
       <section className="faq-section"><div className="faq-title"><Eyebrow>GOOD TO KNOW</Eyebrow><h2>Questions, <em>answered.</em></h2><p>Something else on your mind? Add it to the enquiry form.</p></div><div className="faq-list">{faqItems.map((item, index) => <details key={item.question}><summary><span>0{index + 1}</span>{item.question}<b aria-hidden="true">+</b></summary><p>{item.answer}</p></details>)}</div></section>
     </main>
 
-    <footer className="site-footer"><a className="wordmark" href="#home"><span className="brand-name">Sruthy Lakshmi’s<b>Beauty Zone</b></span></a><nav aria-label="Footer navigation">{navItems.map(([label, id]) => <a href={`#${id}`} key={id}>{label}</a>)}<a href="#services">Service menu</a></nav><p>© {year} Sruthy Lakshmi’s Beauty Zone</p><span className="footer-note">Beauty · Care · Special moments</span></footer>
+    <footer className="site-footer"><a className="wordmark" href={pageLink('home')}><span className="brand-name">Sruthy Lakshmi’s<b>Beauty Zone</b></span></a><nav aria-label="Footer navigation">{navItems.map(([label, id]) => <a href={pageLink(id)} key={id}>{label}</a>)}<a href={pageLink('services')}>Service menu</a></nav><p>© {year} Sruthy Lakshmi’s Beauty Zone</p><span className="footer-note">Beauty · Care · Special moments</span></footer>
     {currentPhoto && <div className="lightbox" role="dialog" aria-modal="true" aria-label="Beauty gallery image viewer" onClick={closePhoto}><button className="lightbox-close" aria-label="Close image viewer" onClick={closePhoto}>×</button><button className="lightbox-previous" aria-label="Previous image" onClick={(event) => { event.stopPropagation(); setActivePhoto((activePhoto === null ? 0 : activePhoto - 1 + photos.gallery.length) % photos.gallery.length) }}>←</button><figure onClick={(event) => event.stopPropagation()}><img src={currentPhoto.src} alt={currentPhoto.alt} /><figcaption>{currentPhoto.label}</figcaption></figure><button className="lightbox-next" aria-label="Next image" onClick={(event) => { event.stopPropagation(); setActivePhoto((activePhoto === null ? 0 : activePhoto + 1) % photos.gallery.length) }}>→</button></div>}
   </>
 }
 
 export default App
+
+
+
