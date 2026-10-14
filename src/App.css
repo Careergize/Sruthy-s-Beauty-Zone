@@ -1,7 +1,1417 @@
-.site-header{height:86px;background:#251916;color:#f3ede4;display:flex;align-items:center;justify-content:space-between;padding:0 6.2%;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(243,237,228,.12)}
-.wordmark{color:inherit;text-decoration:none;display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}.wordmark-name{font:500 20px/1.15 var(--serif);letter-spacing:-.35px}.wordmark-sub{font:600 9px/1.8 var(--sans);letter-spacing:3px;color:#c0a27f}.nav-links{display:flex;align-items:center;gap:clamp(16px,2.4vw,34px)}.nav-links>a{color:#e9dfd3;text-decoration:none;font-size:12px;letter-spacing:.35px;transition:color .2s}.nav-links>a:hover{color:#d7b88f}.nav-links .nav-cta{border:1px solid #a98259;padding:12px 15px;color:#f3ede4}.nav-cta span{color:#c9a779;margin-left:10px}.menu-toggle{display:none}.hero-section{min-height:620px;background:#251916;color:#f3ede4;display:grid;grid-template-columns:.92fr 1.08fr;padding:40px 6.2% 55px;gap:5.3%;align-items:center;overflow:hidden}.hero-copy{padding:30px 0 20px 2.5%;max-width:520px}.eyebrow{font:600 10px/1.4 var(--sans);letter-spacing:2px;color:#c9a779;margin:0 0 22px}.eyebrow>span{display:inline-block;width:21px;height:1px;background:#a98259;vertical-align:middle;margin-right:9px}.hero-copy h1{font:400 clamp(48px,5.4vw,74px)/1.05 var(--serif);letter-spacing:-2.5px;margin:0 0 24px;color:#f3ede4}.hero-copy h1 em,.intro-copy h2 em,.section-heading h2 em,.bridal-copy h2 em,.visit-title h2 em,.appointment-intro h2 em,.contact-main h2 em{font-weight:400;color:#caa77f}.hero-intro{max-width:385px;color:#d4c7ba;font-size:15px;line-height:1.8}.hero-actions{display:flex;align-items:center;gap:27px;margin-top:34px}.button{font:600 11px var(--sans);letter-spacing:.25px;text-decoration:none;display:inline-flex;align-items:center;justify-content:space-between;gap:22px;padding:15px 18px;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}.button span{font-size:15px}.button-gold{background:#a98259;color:#251916}.button-gold:hover{background:#c19b6e}.text-link{color:#e6d8ca;text-decoration:none;font-size:11px;border-bottom:1px solid #a98259;padding-bottom:5px}.text-link span{color:#caa77f;margin-left:7px;font-size:15px}.hero-note{color:#b9a99a;font:italic 13px var(--serif);margin-top:51px}.hero-image-wrap{height:510px;max-height:58vw;position:relative}.hero-image{width:100%;height:100%;object-fit:cover;object-position:center 43%;display:block}.hero-image-wrap:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(27,18,15,.37),transparent 26%);pointer-events:none}.image-caption{position:absolute;z-index:1;bottom:19px;left:20px;right:20px;display:flex;justify-content:space-between;color:white;font:500 9px var(--sans);letter-spacing:1.6px}.hero-vertical{position:absolute;right:-24px;top:25px;writing-mode:vertical-rl;font:500 8px var(--sans);letter-spacing:2px;color:#bd9c75}
-.section-light{background:#f3ede4;color:#302724}.section-ivory{background:#e9dfd2;color:#302724}.intro-section{padding:115px 12%;display:grid;grid-template-columns:1fr 1fr;gap:11%;align-items:center}.intro-photo{position:relative;height:480px}.intro-photo img{width:100%;height:100%;object-fit:cover;display:block}.photo-index{font:600 8px var(--sans);letter-spacing:1.7px;color:#a98259;position:absolute;left:0;bottom:-22px}.intro-copy{max-width:470px}.eyebrow-dark{color:#946f4d}.intro-copy h2,.section-heading h2,.bridal-copy h2,.visit-title h2,.appointment-intro h2,.contact-main h2{font:400 clamp(38px,4vw,54px)/1.12 var(--serif);letter-spacing:-1.2px;color:#302724;margin:0 0 25px}.intro-copy h2 em,.section-heading h2 em,.appointment-intro h2 em{color:#81565a}.intro-copy>p:not(.eyebrow){font-size:14px;line-height:1.9;color:#665a53;margin:0 0 14px}.text-link-dark{color:#302724;display:inline-block;margin-top:15px}.text-link-dark span{color:#81565a}.services-section{padding:99px 9.5% 91px}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:35px}.section-heading h2{margin:0}.section-aside{max-width:290px;color:#756960;font-size:13px;line-height:1.8;margin-bottom:6px}.filter-list{display:flex;gap:10px;flex-wrap:wrap;border-bottom:1px solid #cfc1b1;padding-bottom:15px;margin-bottom:7px}.filter{font:500 10px var(--sans);color:#665950;background:transparent;border:1px solid #cabbab;padding:9px 12px;cursor:pointer;transition:all .2s}.filter:hover,.filter.active{background:#302724;color:#f3ede4;border-color:#302724}.filter span{color:#caa77f;margin-left:7px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:32px}.service-item{position:relative;display:grid;grid-template-columns:32px 1fr;gap:12px;padding:24px 0 22px;min-height:155px}.service-number{font:italic 13px var(--serif);color:#a98259;padding-top:2px}.service-category{font:600 8px var(--sans);text-transform:uppercase;letter-spacing:1.2px;color:#957758;margin:0 0 7px}.service-item h3{font:500 18px/1.2 var(--serif);color:#302724;margin:0 0 7px}.service-description{font-size:11px;line-height:1.65;color:#756960;max-width:215px}.service-enquire{margin-top:9px;border:0;padding:0;background:transparent;color:#81565a;font:600 10px var(--sans);cursor:pointer}.service-enquire span{margin-left:5px}.service-rule{height:1px;background:#d7cabc;position:absolute;bottom:0;left:0;right:0}.service-footnote{font:italic 13px var(--serif);color:#766a61;margin:25px 0 0}.bridal-section{background:#251916;color:#f3ede4;padding:94px 10%;display:grid;grid-template-columns:1.06fr .94fr;gap:10%;align-items:center}.bridal-image{height:495px;position:relative}.bridal-image img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 40%}.bridal-copy{position:relative;padding:20px 0 28px}.bridal-copy h2{color:#f3ede4;margin-bottom:25px}.bridal-copy>p:not(.eyebrow){font-size:13px;line-height:1.9;color:#d4c7ba;max-width:390px;margin:0 0 14px}.button-outline{margin-top:20px;background:transparent;color:#f3ede4;border-color:#a98259}.button-outline:hover{background:#a98259;color:#251916}.bridal-mark{display:block;font:400 28px var(--serif);color:#785d47;margin-top:40px;letter-spacing:5px}.bridal-mark span{font:12px var(--sans);color:#bd9c75;margin:0 9px}.gallery-section{padding:100px 9.5%}.gallery-heading{margin-bottom:39px}.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:240px 205px;gap:16px}.gallery-tile{margin:0;position:relative;overflow:hidden;background:#ddd0c0}.gallery-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s}.gallery-tile:hover img{transform:scale(1.035)}.gallery-tile:after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(33,22,18,.62))}.gallery-tile figcaption{position:absolute;z-index:1;bottom:12px;left:14px;color:white;font:500 10px var(--sans);letter-spacing:.3px}.gallery-tile figcaption span{font:italic 11px var(--serif);color:#ddba8c;margin-right:10px}.tile-1{grid-column:span 4}.tile-2{grid-column:span 4}.tile-3{grid-column:span 4}.tile-4{grid-column:span 3}.tile-5{grid-column:span 5}.tile-6{grid-column:span 4}.visit-section{background:#81565a;color:#f3ede4;padding:75px 11%;display:grid;grid-template-columns:.9fr 1.1fr;gap:12%;align-items:center}.visit-title .eyebrow{color:#e0c6aa}.visit-title h2{color:#f3ede4;margin:0}.visit-title h2 em{color:#e0c6aa}.visit-points article{display:grid;grid-template-columns:37px 1fr;gap:17px;padding:18px 0;border-bottom:1px solid rgba(243,237,228,.25)}.visit-points article:first-child{border-top:1px solid rgba(243,237,228,.25)}.visit-points article>span{font:italic 14px var(--serif);color:#e0c6aa}.visit-points h3{font:500 17px var(--serif);margin:0 0 5px}.visit-points p{font-size:11px;color:#eadbd3;line-height:1.7;margin:0}.appointment-section{padding:104px 11%;display:grid;grid-template-columns:.8fr 1.2fr;gap:11%}.appointment-intro>p:not(.eyebrow){font-size:13px;line-height:1.9;color:#6f6259;max-width:340px}.demo-note{display:flex;gap:12px;border-top:1px solid #d0c2b4;margin-top:35px;padding-top:18px;max-width:350px}.demo-note>span{color:#a98259}.demo-note p{font-size:10px;line-height:1.7;color:#756960;margin:0}.demo-note strong{color:#302724;font-size:11px}.appointment-form{display:flex;flex-direction:column;gap:20px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:19px}.appointment-form label{display:flex;flex-direction:column;gap:8px;color:#554942;font:600 10px var(--sans);letter-spacing:.2px}.appointment-form label>span{color:#81565a;display:inline}.appointment-form label small{display:inline;font-size:9px;color:#94867b;font-weight:400}.appointment-form input,.appointment-form select,.appointment-form textarea{width:100%;border:0;border-bottom:1px solid #c8b9a9;background:transparent;border-radius:0;padding:10px 2px;color:#302724;font:400 12px var(--sans);outline:none}.appointment-form textarea{resize:vertical}.appointment-form input:focus,.appointment-form select:focus,.appointment-form textarea:focus{border-color:#81565a;box-shadow:0 1px 0 #81565a}.appointment-form input::placeholder,.appointment-form textarea::placeholder{color:#aa9b8f}.button-dark{align-self:flex-start;background:#302724;color:#f3ede4}.button-dark:hover{background:#81565a}.form-privacy{font-size:9px;color:#887c72;margin-top:-11px}.form-confirmation{display:flex;flex-direction:column;gap:4px;padding:13px 15px;background:#e4eee3;border-left:2px solid #6a8765;color:#314630;font-size:12px}.form-confirmation span{font-size:10px}.form-error{font-size:11px;color:#81565a}.contact-section{padding:85px 11%;background:#302724;color:#f3ede4;display:grid;grid-template-columns:.85fr 1.15fr;gap:10%}.contact-main h2{color:#f3ede4;margin-bottom:22px}.contact-main h2 em{color:#caa77f}.contact-main>p:not(.eyebrow){font-size:12px;line-height:1.8;color:#d4c7ba;max-width:300px;margin-bottom:23px}.contact-details{display:grid;grid-template-columns:1fr 1fr;column-gap:38px}.contact-details>div{padding:14px 0;border-bottom:1px solid rgba(243,237,228,.2)}.contact-details>div>span{font:600 8px var(--sans);letter-spacing:1.4px;color:#caa77f}.contact-details p{font:500 14px var(--serif);margin:7px 0 0}.contact-details small{font:400 10px var(--sans);color:#c9bcb0}.site-footer{background:#251916;color:#f3ede4;padding:48px 8% 20px}.footer-top{display:grid;grid-template-columns:1.3fr .8fr 1fr 1fr;gap:5%;padding-bottom:40px}.footer-brand>p{font:italic 12px var(--serif);color:#c9bcb0;max-width:210px;margin-top:18px}.footer-top h2{font:600 9px var(--sans);text-transform:uppercase;letter-spacing:1.1px;color:#caa77f;margin:0 0 15px}.footer-links{display:flex;flex-direction:column;gap:9px}.footer-links a,.footer-links button,.footer-placeholder{font:400 10px/1.7 var(--sans);text-decoration:none;color:#d6c9bd}.footer-links a:hover,.footer-links button:hover{color:#caa77f}.footer-links button{border:0;background:none;text-align:left;padding:0;cursor:pointer}.footer-placeholder{margin:0}.footer-bottom{border-top:1px solid rgba(243,237,228,.16);padding-top:14px;display:flex;justify-content:space-between;color:#9d8b7d;font-size:9px}
-@media(max-width:1050px){.site-header{padding:0 4%}.nav-links{gap:16px}.nav-links>a{font-size:11px}.nav-links .nav-cta{padding:10px}.hero-section{padding-left:5%;padding-right:5%;gap:4%}.intro-section{padding:85px 8%;gap:8%}.services-section,.gallery-section{padding-left:7%;padding-right:7%}.bridal-section{padding:75px 7%;gap:7%}.appointment-section,.contact-section{padding-left:8%;padding-right:8%}}
-@media(max-width:760px){.site-header{height:72px;padding:0 6%;}.wordmark-name{font-size:18px}.menu-toggle{width:42px;height:42px;border:1px solid rgba(243,237,228,.28);background:transparent;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;color:inherit}.menu-toggle span{height:1px;width:18px;background:#f3ede4}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#251916;padding:14px 6% 23px;align-items:stretch;gap:0;border-top:1px solid rgba(243,237,228,.15)}.nav-links.is-open{display:flex;flex-direction:column}.nav-links>a{font-size:13px;padding:13px 0;border-bottom:1px solid rgba(243,237,228,.1)}.nav-links .nav-cta{margin-top:13px;padding:13px 14px;border:1px solid #a98259}.hero-section{grid-template-columns:1fr;gap:32px;padding:40px 6% 36px}.hero-copy{padding:8px 0 0 1%;max-width:540px}.hero-copy h1{font-size:clamp(48px,12vw,68px)}.hero-intro{font-size:14px}.hero-note{margin-top:26px}.hero-image-wrap{height:360px;max-height:none;margin-right:10px}.hero-vertical{right:-19px}.intro-section{padding:66px 7%;grid-template-columns:1fr;gap:45px}.intro-photo{height:370px;margin-right:13%}.intro-copy{padding-left:4%}.intro-copy h2,.section-heading h2,.bridal-copy h2,.visit-title h2,.appointment-intro h2,.contact-main h2{font-size:43px}.services-section{padding:70px 6%}.section-heading{display:block}.section-aside{margin-top:18px;max-width:420px}.filter-list{flex-wrap:nowrap;overflow:auto;padding-bottom:13px;scrollbar-width:thin}.filter{white-space:nowrap}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px}.service-item{min-height:158px;grid-template-columns:26px 1fr;gap:8px}.service-item h3{font-size:16px}.bridal-section{grid-template-columns:1fr;padding:65px 7%;gap:42px}.bridal-image{height:390px;margin-right:8%}.bridal-copy{padding-left:4%}.bridal-mark{margin-top:25px}.gallery-section{padding:70px 6%}.gallery-grid{grid-template-rows:190px 170px;gap:10px}.gallery-tile figcaption{font-size:9px;left:9px;bottom:9px}.gallery-tile figcaption span{margin-right:4px}.visit-section{padding:60px 8%;grid-template-columns:1fr;gap:30px}.appointment-section{padding:70px 7%;grid-template-columns:1fr;gap:40px}.appointment-intro>p:not(.eyebrow){max-width:450px}.demo-note{margin-top:25px}.contact-section{padding:65px 7%;grid-template-columns:1fr;gap:35px}.contact-details{column-gap:22px}.footer-top{grid-template-columns:1fr 1fr;gap:34px 22px}.site-footer{padding:40px 7% 18px}}
-@media(max-width:460px){.hero-actions{align-items:flex-start;flex-direction:column;gap:18px;margin-top:27px}.hero-image-wrap{height:295px}.intro-photo{height:305px;margin-right:9%}.section-heading{margin-bottom:27px}.service-grid{grid-template-columns:1fr}.service-item{min-height:0;padding:19px 0}.service-description{max-width:280px}.service-footnote{line-height:1.7}.bridal-image{height:315px;margin-right:4%}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,160px);gap:9px}.tile-1,.tile-2,.tile-3,.tile-4,.tile-5,.tile-6{grid-column:span 1}.tile-1,.tile-5{grid-row:span 1}.gallery-heading .section-aside{font-size:12px}.form-row{grid-template-columns:1fr;gap:18px}.appointment-form{gap:18px}.contact-details{grid-template-columns:1fr 1fr;gap:0 16px}.footer-top{grid-template-columns:1fr 1fr;gap:30px 17px}.footer-brand{grid-column:1/-1}.footer-bottom{gap:12px;flex-direction:column}.contact-details p{font-size:13px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.announcement{height:26px;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--charcoal);color:#fff;font:600 8px var(--sans);letter-spacing:1.8px}.announcement span{color:#d88aa5}
+.site-header{height:78px;padding:0 7.5%;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #e9e6e7}.wordmark{text-decoration:none;color:var(--charcoal)}.brand-name{display:block;font:500 15px/1.05 var(--serif);letter-spacing:.1px}.brand-name b{display:block;margin-top:4px;color:var(--raspberry);font:700 8px/1.1 var(--sans);letter-spacing:2px;text-transform:uppercase}.nav-links{display:flex;align-items:center;gap:clamp(18px,2.5vw,36px)}.nav-links>a{color:#534d54;text-decoration:none;font-size:10px;transition:color .18s}.nav-links>a:hover{color:var(--raspberry)}.nav-links .nav-cta{margin-left:5px;padding:11px 15px;border:1px solid var(--raspberry);color:var(--raspberry);font:700 8px var(--sans);letter-spacing:1px;text-transform:uppercase}.nav-links .nav-cta:hover{background:var(--raspberry);color:white}.nav-cta span{margin-left:10px}.menu-toggle{display:none}
+.eyebrow{margin:0 0 18px;color:var(--raspberry);font:700 8px var(--sans);letter-spacing:1.7px;text-transform:uppercase}.eyebrow-light{color:#f4d5df}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;padding:14px 17px;border:0;text-decoration:none;cursor:pointer;font:700 8px var(--sans);letter-spacing:1px;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}.button span{font-size:14px}.button-raspberry{background:var(--raspberry);color:white}.button-raspberry:hover{background:#94264c}
+.hero-section{height:min(690px,calc(100vh - 104px));min-height:545px;position:relative;overflow:hidden;background:#393238;color:white}.hero-photo,.hero-photo>img,.hero-shade{position:absolute;inset:0;width:100%;height:100%}.hero-photo>img{object-fit:cover;object-position:center 36%}.hero-shade{background:linear-gradient(90deg,rgba(31,27,32,.79) 0%,rgba(36,30,36,.63) 32%,rgba(40,31,37,.17) 70%,rgba(40,31,37,.03) 100%)}.hero-copy{position:absolute;top:50%;left:11%;transform:translateY(-50%);z-index:1;width:min(455px,40vw)}.hero-copy .eyebrow{margin-bottom:22px}.hero-copy h1{margin:0 0 19px;color:white;font:400 clamp(47px,5.35vw,74px)/.99 var(--serif);letter-spacing:-1.8px}
+
+
+.hero-copy h1 em {
+  color: #f0dfe3;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 450px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.hero-actions{display:flex;align-items:center;gap:25px;margin-top:26px}.hero-secondary{padding:0 0 5px;border-bottom:1px solid rgba(255,255,255,.7);color:white;font:700 8px var(--sans);letter-spacing:1px;text-decoration:none;text-transform:uppercase}.hero-secondary span{margin-left:10px}.hero-caption{position:absolute;left:7.5%;bottom:22px;color:white;font:700 7px var(--sans);letter-spacing:1.35px}.hero-caption i{display:inline-block;width:20px;height:1px;margin:0 9px 2px;background:#e4a7ba}.hero-counter{position:absolute;right:7.5%;bottom:22px;color:#fff;font:700 8px var(--sans);letter-spacing:1.2px}.hero-counter i{display:inline-block;width:35px;height:1px;margin:0 8px 2px;background:rgba(255,255,255,.65)}
+.category-section{padding:87px 9% 72px;background:var(--warm-white)}.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:29px}.section-heading h2,.experience-copy h2,.service-heading h2,.occasion-copy h2,.why-title h2,.appointment-copy h2,.faq-title h2{margin:0;color:var(--charcoal);font:400 clamp(40px,4vw,55px)/1.02 var(--serif);letter-spacing:-.9px}.section-heading h2 em,.experience-copy h2 em,.service-heading h2 em,.occasion-copy h2 em,.why-title h2 em,.appointment-copy h2 em,.faq-title h2 em{color:var(--raspberry);font-style:italic}.section-heading>p{max-width:350px;margin:0 0 5px;color:#69636a;font-size:10px;line-height:1.85}.category-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.category-tile{min-width:0}.tile-image{display:block;width:100%;height:clamp(250px,29vw,390px);overflow:hidden;padding:0;border:0;background:#e8e3e8;cursor:pointer}.tile-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}.tile-image:hover img{transform:scale(1.035)}.skin-tile .tile-image img{object-position:center 40%}.hair-tile .tile-image img{object-position:center 38%}.bridal-tile .tile-image img{object-position:center 34%}.tile-caption{position:relative;padding:15px 0 0;border-bottom:1px solid #d9d5d9;display:grid;grid-template-columns:1fr auto;align-items:end;gap:5px}.tile-caption>span{grid-column:1/-1;color:#89818a;font:700 7px var(--sans);letter-spacing:1.4px}.tile-caption h3{margin:2px 0 13px;font:400 21px/1.15 var(--serif);color:var(--charcoal)}.tile-caption>button{margin-bottom:13px;padding:3px 0;border:0;background:transparent;color:var(--raspberry);font:700 8px var(--sans);letter-spacing:.8px;text-transform:uppercase;cursor:pointer}.tile-caption>button b{margin-left:8px}.other-categories{display:flex;justify-content:center;align-items:center;gap:0;margin-top:27px;border-top:1px solid #e2dfe2;border-bottom:1px solid #e2dfe2}.other-categories button{display:flex;align-items:center;gap:10px;padding:15px 23px;border:0;background:transparent;color:#514b53;font:600 9px var(--sans);cursor:pointer}.other-categories button+button{border-left:1px solid #e2dfe2}.other-categories button span{color:var(--raspberry);font:italic 11px var(--serif)}.other-categories button b{margin-left:4px;color:var(--raspberry);font-weight:500}.other-categories button:hover{color:var(--raspberry)}
+.experience-section{padding:55px 12%;display:grid;grid-template-columns:1.05fr .95fr;gap:11%;align-items:center;background:#fff}.experience-photo{height:430px;position:relative;margin-right:4%;background:#e6e1e4}.experience-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%}.experience-photo>span{position:absolute;left:0;bottom:0;padding:11px 14px;background:var(--lavender);color:#49414d;font:700 7px var(--sans);letter-spacing:1.25px}.experience-copy{padding:5px 0}.experience-copy h2{margin-bottom:21px}.experience-copy>p:not(.eyebrow){max-width:400px;margin:0;color:#655e66;font-size:11px;line-height:1.9}.text-link{display:inline-block;margin-top:25px;padding-bottom:6px;border-bottom:1px solid var(--raspberry);color:var(--charcoal);font:700 8px var(--sans);letter-spacing:.9px;text-decoration:none;text-transform:uppercase}.text-link span{margin-left:13px;color:var(--raspberry)}.experience-note{display:flex;align-items:center;gap:10px;margin-top:43px;padding-top:13px;border-top:1px solid #e8e4e8;color:#807981;font:700 7px var(--sans);letter-spacing:1.1px}.experience-note i{width:3px;height:3px;border-radius:50%;background:#c292a2}
+.services-section{padding:90px 10% 103px;background:var(--lavender)}.service-heading{margin-bottom:35px}.service-heading>p{max-width:300px}.service-browser{display:grid;grid-template-columns:.76fr 1.24fr;gap:7%;padding-top:19px;border-top:1px solid #cec5d4}.service-categories{display:flex;flex-direction:column}.category-filter{width:100%;display:grid;grid-template-columns:29px 1fr 16px;align-items:center;gap:9px;padding:14px 5px;border:0;border-bottom:1px solid #d5ceda;text-align:left;background:transparent;color:#524b56;font:500 10px var(--sans);cursor:pointer;transition:padding .18s,color .18s}.category-filter:first-child{border-top:1px solid #d5ceda}.category-filter>span{color:#8a7e90;font:italic 10px var(--serif)}.category-filter>b{justify-self:end;color:#867a8d;font-weight:500}.category-filter:hover,.category-filter.active{color:var(--raspberry)}.category-filter.active{padding-left:11px;font-weight:700}.category-filter.active>span,.category-filter.active>b{color:var(--raspberry)}.service-content{padding:6px 0 0}.service-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding-bottom:17px;border-bottom:1px solid #d1c8d8}.service-intro>div>span{color:#847988;font:700 7px var(--sans);letter-spacing:1.25px}.service-intro h3{margin:5px 0 0;color:var(--charcoal);font:400 clamp(22px,2.4vw,31px)/1.12 var(--serif)}.service-intro>p{max-width:240px;margin:0;color:#655d69;font-size:9px;line-height:1.7}.service-row{min-height:74px;display:grid;grid-template-columns:27px 1fr auto;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #d6cedc}.service-number{align-self:start;padding-top:4px;color:#a15b77;font:italic 10px var(--serif)}.service-row h4{margin:0 0 4px;color:#322d34;font:600 12px var(--sans)}.service-row p{margin:0;color:#716976;font-size:9px;line-height:1.5}.service-row>button{padding:8px 0 8px 8px;border:0;background:transparent;color:var(--raspberry);white-space:nowrap;font:700 8px var(--sans);cursor:pointer}.service-row>button span{margin-left:6px}.service-row>button:hover{text-decoration:underline}.service-note{margin:13px 0 0;color:#746d78;font:italic 10px var(--serif)}
+.occasion-section{min-height:540px;display:grid;grid-template-columns:.92fr 1.08fr;background:var(--warm-white)}.occasion-copy{position:relative;padding:76px 11% 76px 17%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.occasion-copy h2{font-size:clamp(43px,4.45vw,61px);margin-bottom:19px}.occasion-copy>p:not(.eyebrow){max-width:365px;margin:0 0 24px;color:#655e66;font-size:11px;line-height:1.9}.occasion-labels{position:absolute;left:17%;right:9%;bottom:25px;display:flex;align-items:center;gap:10px;color:#817982;font:700 7px var(--sans);letter-spacing:1px}.occasion-labels i{width:3px;height:3px;border-radius:50%;background:var(--raspberry)}.occasion-photo{position:relative;min-height:540px;background:#e7dfe4}.occasion-photo img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 39%}.occasion-photo>span{position:absolute;left:17px;bottom:17px;padding:10px 12px;background:rgba(255,255,255,.94);color:#4b424c;font:700 7px var(--sans);letter-spacing:1.1px}
+.gallery-section{padding:93px 9% 106px;background:#fff}.gallery-section .section-heading{margin-bottom:32px}.gallery-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:220px 190px;gap:12px}.gallery-tile{position:relative;overflow:hidden;padding:0;border:0;background:#e5e0e5;text-align:left;cursor:zoom-in}.gallery-tile img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}.gallery-tile:hover img{transform:scale(1.035)}.gallery-tile::after{content:'';position:absolute;inset:58% 0 0;background:linear-gradient(transparent,rgba(34,29,34,.64));pointer-events:none}.gallery-1{grid-column:span 5}.gallery-2{grid-column:span 3}.gallery-3{grid-column:span 4}.gallery-4{grid-column:span 4}.gallery-5{grid-column:span 4}.gallery-6{grid-column:span 4}.gallery-tile>span{position:absolute;z-index:1;left:13px;bottom:12px;color:white;font:600 9px var(--sans)}.gallery-tile>span i{margin-right:8px;color:#f0bccd;font:italic 10px var(--serif)}.gallery-tile>b{position:absolute;z-index:1;right:11px;top:11px;width:28px;height:28px;display:grid;place-items:center;background:white;color:var(--charcoal);font-size:12px;opacity:0;transition:opacity .18s}.gallery-tile:hover>b,.gallery-tile:focus-visible>b{opacity:1}
+.why-section{padding:62px 12%;display:grid;grid-template-columns:.9fr 1.1fr;gap:12%;align-items:center;background:#f0edf1}.why-title h2{font-size:clamp(38px,3.6vw,48px)}.why-list{border-top:1px solid #d5cfd7}.why-list article{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:center;min-height:60px;border-bottom:1px solid #d5cfd7}.why-list article>span{color:var(--raspberry);font:italic 11px var(--serif)}.why-list p{margin:0;color:#514b54;font-size:10px;line-height:1.7}
+.appointment-section{padding:92px 11% 94px;display:grid;grid-template-columns:.8fr 1.2fr;gap:10%;align-items:start;background:#fff}.appointment-copy{padding-top:3px}.appointment-copy h2{margin-bottom:19px}.appointment-copy>p:not(.eyebrow){max-width:315px;margin:0;color:#655e66;font-size:11px;line-height:1.9}.appointment-form{display:flex;flex-direction:column;gap:20px;min-width:0}.form-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}.form-date-row{display:grid;grid-template-columns:minmax(0,calc((100% - 24px)/2))}.appointment-form label{display:flex;min-width:0;flex-direction:column;gap:7px;color:#423c44;font:600 9px var(--sans)}.appointment-form label>span{color:var(--raspberry)}.appointment-form label small{display:block;color:#89818a;font-size:8px;font-weight:400;line-height:1.35}.appointment-form input,.appointment-form select,.appointment-form textarea{width:100%;min-width:0;padding:10px 2px;border:0;border-bottom:1px solid #cfc9cf;border-radius:0;background:transparent;color:#302b32;font:400 11px var(--sans);outline:none}.appointment-form textarea{resize:vertical}.appointment-form input:focus,.appointment-form select:focus,.appointment-form textarea:focus{border-color:var(--raspberry);box-shadow:0 1px var(--raspberry)}.appointment-form input::placeholder,.appointment-form textarea::placeholder{color:#a39ba3}.message-field{width:100%}.appointment-form>.button{align-self:flex-start;margin-top:2px}.form-error{margin:0;color:#9a204c;font-size:10px;line-height:1.6}.form-confirmation{padding:14px 16px;border-left:3px solid var(--raspberry);background:var(--lavender);color:#3d3540;font-size:10px;line-height:1.7}.form-privacy{margin:-9px 0 0;color:var(--muted);font:400 9px/1.55 var(--sans)}
+.faq-section{padding:72px 12%;display:grid;grid-template-columns:.75fr 1.25fr;gap:12%;background:var(--warm-white)}.faq-title h2{font-size:clamp(37px,3.5vw,47px)}.faq-title>p{max-width:260px;margin:14px 0 0;color:#6b646c;font-size:10px;line-height:1.8}.faq-list details{border-bottom:1px solid #ddd8dd}.faq-list details:first-child{border-top:1px solid #ddd8dd}.faq-list summary{list-style:none;display:grid;grid-template-columns:29px 1fr 18px;gap:10px;align-items:center;padding:16px 0;cursor:pointer;color:#3e3840;font:600 10px var(--sans)}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary>span{color:var(--raspberry);font:italic 10px var(--serif)}.faq-list summary>b{color:var(--raspberry);font:400 16px var(--sans);text-align:right;transition:transform .18s}.faq-list details[open] summary>b{transform:rotate(45deg)}.faq-list details>p{padding:0 24px 15px 39px;margin:0;color:#6d666f;font-size:9px;line-height:1.8}
+.site-footer{min-height:100px;padding:27px 8%;display:grid;grid-template-columns:1fr 2.2fr auto;gap:22px;align-items:center;border-top:1px solid #e8e4e8;background:#fff}.site-footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:18px}.site-footer nav a{color:#615a63;text-decoration:none;font-size:9px}.site-footer nav a:hover{color:var(--raspberry)}.site-footer>p{margin:0;color:#817a82;font-size:8px}.footer-note{grid-column:1/-1;margin-top:-14px;color:#a08a96;font:italic 10px var(--serif);text-align:center}
+.lightbox{position:fixed;inset:0;z-index:50;padding:48px 6%;display:flex;align-items:center;justify-content:center;gap:22px;background:rgba(33,29,34,.95)}.lightbox figure{max-width:min(900px,78vw);max-height:82vh;margin:0;display:flex;flex-direction:column;align-items:center;gap:11px}.lightbox figure img{display:block;max-width:100%;max-height:75vh;object-fit:contain}.lightbox figcaption{color:white;font-size:10px;text-align:center}.lightbox button{width:42px;height:42px;border:1px solid rgba(255,255,255,.5);background:transparent;color:white;font-size:20px;cursor:pointer}.lightbox button:hover{background:var(--raspberry);border-color:var(--raspberry)}.lightbox .lightbox-close{position:absolute;top:17px;right:22px;border:0;font-size:28px}.dialog-open{overflow:hidden}
+@media(max-width:1050px){.site-header{padding:0 4%}.nav-links{gap:17px}.nav-links>a{font-size:9px}.hero-copy{left:8%;width:min(440px,46vw)}.hero-copy h1{font-size:clamp(45px,6vw,67px)}.category-section,.gallery-section{padding-left:6%;padding-right:6%}.experience-section{padding-left:8%;padding-right:8%;gap:8%}.services-section{padding-left:7%;padding-right:7%}.occasion-copy{padding-left:11%}.occasion-labels{left:11%}.appointment-section{padding-left:8%;padding-right:8%}.site-footer{padding-left:5%;padding-right:5%}}
+@media(max-width:760px){.announcement{height:24px;font-size:7px}.site-header{height:69px;padding:0 6%}.brand-name{font-size:14px}.menu-toggle{display:flex;width:40px;height:40px;flex-direction:column;justify-content:center;align-items:center;gap:6px;border:1px solid #ddd7dd;background:transparent;cursor:pointer}.menu-toggle span{height:1px;width:17px;background:var(--charcoal);transition:transform .2s}.menu-toggle.is-open span:first-child{transform:translateY(3.5px) rotate(45deg)}.menu-toggle.is-open span:last-child{transform:translateY(-3.5px) rotate(-45deg)}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;padding:8px 6% 18px;background:#fff;align-items:stretch;gap:0;border-bottom:1px solid #e5e0e5;box-shadow:0 10px 20px rgba(39,34,40,.07)}.nav-links.is-open{display:flex;flex-direction:column}.nav-links>a{padding:12px 0;border-bottom:1px solid #eeeaf0;font-size:11px}.nav-links .nav-cta{margin:12px 0 0;padding:12px 14px;border:1px solid var(--raspberry);text-align:center}.hero-section{height:640px;min-height:0}.hero-photo>img{object-position:60% center}.hero-shade{background:linear-gradient(0deg,rgba(31,27,32,.77),rgba(36,30,36,.35) 68%,rgba(40,31,37,.08))}.hero-copy{top:auto;bottom:70px;left:7%;transform:none;width:86%}.hero-copy h1{font-size:clamp(45px,10vw,63px);letter-spacing:-1.2px}.hero-copy>p:not(.eyebrow){max-width:430px;font-size:11px}.hero-actions{gap:18px;margin-top:21px}.hero-caption{left:7%;bottom:20px;font-size:6px}.hero-counter{right:7%;bottom:20px;font-size:7px}.category-section{padding:70px 7% 57px}.section-heading{display:block;margin-bottom:23px}.section-heading h2,.experience-copy h2,.service-heading h2,.occasion-copy h2,.appointment-copy h2{font-size:43px}.section-heading>p{margin-top:14px;max-width:420px}.category-tiles{grid-template-columns:1fr;gap:27px}.tile-image{height:clamp(245px,68vw,380px)}.tile-caption h3{font-size:21px;margin-bottom:11px}.tile-caption>button{margin-bottom:11px}.other-categories{align-items:stretch;flex-direction:column;margin-top:23px}.other-categories button{justify-content:space-between;padding:13px 5px}.other-categories button+button{border-left:0;border-top:1px solid #e2dfe2}.experience-section{padding:71px 7%;grid-template-columns:1fr;gap:32px}.experience-photo{height:340px;margin-right:9%}.experience-copy{padding:0 2%}.experience-copy h2{font-size:44px}.experience-note{margin-top:29px;gap:8px;font-size:6px}.services-section{padding:70px 6% 77px}.service-heading{margin-bottom:24px}.service-heading>p{margin-top:13px}.service-browser{grid-template-columns:1fr;gap:0;padding-top:10px}.service-categories{display:flex;flex-direction:row;overflow-x:auto;gap:7px;padding:9px 0 14px;scrollbar-width:thin}.category-filter{display:flex;width:auto;min-width:max-content;gap:8px;padding:9px 11px;border:1px solid #d5ceda!important;font-size:9px}.category-filter.active{padding-left:11px}.category-filter>b{margin-left:2px}.service-intro{align-items:flex-start;flex-direction:column;gap:8px}.service-intro>p{max-width:400px}.service-row{grid-template-columns:24px 1fr auto;gap:7px;min-height:69px;padding:11px 0}.service-row h4{font-size:11px}.service-row p{font-size:8px}.service-row>button{font-size:7px;padding-left:3px}.occasion-section{grid-template-columns:1fr}.occasion-copy{min-height:370px;padding:54px 8% 72px}.occasion-copy h2{font-size:47px}.occasion-labels{left:8%;right:6%;bottom:22px;gap:7px;font-size:6px}.occasion-photo{min-height:390px;height:390px}.occasion-photo>img{object-position:center 35%}.gallery-section{padding:72px 6% 79px}.gallery-grid{grid-template-rows:190px 165px;gap:9px}.gallery-tile>span{left:8px;bottom:8px;font-size:8px}.gallery-tile>span i{margin-right:4px}.gallery-tile>b{opacity:1;width:24px;height:24px;right:7px;top:7px}.why-section{padding:55px 8%;grid-template-columns:1fr;gap:20px}.why-title h2{font-size:41px}.appointment-section{padding:71px 7%;grid-template-columns:1fr;gap:31px}.appointment-copy h2{font-size:45px}.faq-section{padding:66px 7%;grid-template-columns:1fr;gap:19px}.faq-title h2{font-size:40px}.site-footer{padding:30px 7% 20px;grid-template-columns:1fr;gap:17px;text-align:center}.site-footer .wordmark{justify-self:center}.site-footer nav{gap:11px 16px}.site-footer>p{line-height:1.6}.footer-note{margin-top:-8px}}
+@media(max-width:460px){.hero-section{height:590px}.hero-photo>img{object-position:58% center}.hero-copy{bottom:67px}.hero-copy h1{font-size:45px}.hero-copy>p:not(.eyebrow){font-size:10px}.hero-caption{font-size:5px;letter-spacing:.8px}.hero-counter{font-size:6px}.hero-counter i{width:20px}.section-heading h2,.experience-copy h2,.service-heading h2,.appointment-copy h2{font-size:39px}.tile-image{height:260px}.experience-photo{height:285px}.experience-note{flex-wrap:wrap}.service-row{grid-template-columns:20px 1fr;position:relative;padding-bottom:30px}.service-row>button{position:absolute;right:0;bottom:5px;padding:5px 0}.occasion-copy{min-height:350px}.occasion-copy h2{font-size:43px}.occasion-labels{gap:5px;font-size:5px;letter-spacing:.4px}.occasion-photo{min-height:330px;height:330px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,145px);gap:8px}.gallery-1,.gallery-2,.gallery-3,.gallery-4,.gallery-5,.gallery-6{grid-column:span 1}.form-row{grid-template-columns:1fr;gap:16px}.date-note{font-size:10px}.faq-list summary{grid-template-columns:24px 1fr 17px;gap:7px;font-size:9px}.faq-list details>p{padding-left:31px}.lightbox{gap:7px;padding:55px 10px}.lightbox figure{max-width:74vw}.lightbox button{width:35px;height:35px}.lightbox .lightbox-close{top:10px;right:10px}}
+
+/* ==========================================
+   SRUTHY LAKSHMI'S BEAUTY ZONE
+   BLACK & WHITE THEME OVERRIDES
+   ========================================== */
+
+/* Announcement bar */
+.announcement {
+  min-height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 5px 16px;
+  background: #171717;
+  color: #e8e0d8;
+  font: 500 9px var(--sans);
+  letter-spacing: 1.5px;
+}
+
+.announcement span {
+  color: #c58b91;
+}
+
+/* Navigation and brand */
+.wordmark,
+.brand-name,
+.brand-name b {
+  color: #111111;
+}
+
+.nav-links > a {
+  color: #444444;
+}
+
+.nav-links > a:hover {
+  color: #111111;
+}
+
+.nav-links .nav-cta {
+  border-color: #111111;
+  color: #111111;
+  background: transparent;
+}
+
+.nav-links .nav-cta:hover {
+  background: #111111;
+  color: #FFFFFF;
+}
+
+/* Buttons */
+.button-raspberry {
+  background: #111111;
+  color: #FFFFFF;
+}
+
+.button-raspberry:hover {
+  background: #444444;
+  color: #FFFFFF;
+}
+
+/* Hero */
+.hero-copy h1 em {
+  color: #FFFFFF;
+}
+
+.hero-caption i,
+.hero-counter i {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Section headings */
+.section-heading h2 em,
+.experience-copy h2 em,
+.service-heading h2 em,
+.occasion-copy h2 em,
+.why-title h2 em,
+.appointment-copy h2 em,
+.faq-title h2 em {
+  color: #111111;
+}
+
+/* Category section */
+.category-section {
+  background: #FAFAFA;
+}
+
+.tile-caption {
+  border-color: #DDDDDD;
+}
+
+.tile-caption > button {
+  color: #111111;
+}
+
+.other-categories {
+  border-color: #DDDDDD;
+}
+
+.other-categories button {
+  color: #444444;
+}
+
+.other-categories button span,
+.other-categories button b,
+.other-categories button:hover {
+  color: #111111;
+}
+
+.other-categories button + button {
+  border-color: #DDDDDD;
+}
+
+/* About section */
+.experience-section {
+  background: #FFFFFF;
+}
+
+.experience-photo > span {
+  background: #F2F2F2;
+  color: #111111;
+}
+
+.text-link {
+  border-color: #111111;
+  color: #111111;
+}
+
+.text-link span {
+  color: #111111;
+}
+
+.experience-note i {
+  background: #777777;
+}
+
+/* Services section */
+.services-section {
+  background: #F2F2F2;
+}
+
+.service-browser,
+.category-filter,
+.category-filter:first-child,
+.service-intro,
+.service-row {
+  border-color: #D5D5D5;
+}
+
+.category-filter {
+  color: #444444;
+}
+
+.category-filter:hover,
+.category-filter.active,
+.category-filter.active > span,
+.category-filter.active > b {
+  color: #111111;
+}
+
+.service-number {
+  color: #777777;
+}
+
+.service-row > button {
+  color: #111111;
+}
+
+/* Bridal section */
+.occasion-section {
+  background: #FAFAFA;
+}
+
+.occasion-photo > span {
+  background: rgba(255, 255, 255, 0.96);
+  color: #111111;
+}
+
+.occasion-labels i {
+  background: #777777;
+}
+
+/* Gallery */
+.gallery-section {
+  background: #FFFFFF;
+}
+
+.gallery-tile > span i {
+  color: #FFFFFF;
+}
+
+/* Why choose us */
+.why-section {
+  background: #F2F2F2;
+}
+
+.why-list,
+.why-list article {
+  border-color: #D5D5D5;
+}
+
+.why-list article > span {
+  color: #111111;
+}
+
+/* Appointment form */
+.appointment-section {
+  background: #FFFFFF;
+}
+
+.appointment-form label > span {
+  color: #111111;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: #111111;
+  box-shadow: 0 1px #111111;
+}
+
+.form-error {
+  color: #444444;
+}
+
+.form-confirmation {
+  border-left-color: #111111;
+  background: #F2F2F2;
+  color: #111111;
+}
+
+.form-privacy {
+  color: #777777;
+}
+
+/* FAQs */
+.faq-section {
+  background: #FAFAFA;
+}
+
+.faq-list details,
+.faq-list details:first-child {
+  border-color: #DDDDDD;
+}
+
+.faq-list summary > span,
+.faq-list summary > b {
+  color: #111111;
+}
+
+/* Footer */
+.site-footer {
+  background: #FFFFFF;
+  border-color: #DDDDDD;
+}
+
+.site-footer nav a {
+  color: #444444;
+}
+
+.site-footer nav a:hover {
+  color: #111111;
+}
+
+/* Lightbox */
+.lightbox button:hover {
+  background: #444444;
+  border-color: #FFFFFF;
+}
+
+/* Mobile navigation */
+@media (max-width: 760px) {
+  .nav-links {
+    background: #FFFFFF;
+    border-color: #DDDDDD;
+  }
+
+  .nav-links > a {
+    border-color: #EEEEEE;
+  }
+
+  .nav-links .nav-cta {
+    border-color: #111111;
+  }
+
+  .menu-toggle {
+    border-color: #DDDDDD;
+  }
+
+  .menu-toggle span {
+    background: #111111;
+  }
+}
+
+/* Consistent keyboard focus */
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 3px;
+}
+
+/* FINAL BLACK & WHITE THEME FIX */
+
+/* Main page backgrounds */
+html,
+body,
+#root {
+  background: #000 !important;
+  color: #fff;
+}
+
+.announcement,
+.site-header,
+.category-section,
+.experience-section,
+.services-section,
+.occasion-section,
+.gallery-section,
+.why-section,
+.appointment-section,
+.faq-section,
+.site-footer {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* All main headings and paragraph text */
+.site-header *,
+.category-section *,
+.experience-section *,
+.services-section *,
+.occasion-section *,
+.gallery-section *,
+.why-section *,
+.appointment-section *,
+.faq-section *,
+.site-footer * {
+  color: #fff;
+}
+
+/* Keep images natural */
+.hero-photo img,
+.tile-image img,
+.experience-photo img,
+.occasion-photo img,
+.gallery-tile img {
+  filter: none;
+}
+
+/* Service section separators */
+.tile-caption,
+.other-categories,
+.other-categories button + button,
+.service-browser,
+.category-filter,
+.service-intro,
+.service-row,
+.why-list,
+.why-list article,
+.faq-list details {
+  border-color: #333 !important;
+}
+
+/* Service buttons and links */
+.nav-links .nav-cta,
+.button-raspberry {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+}
+
+.nav-links .nav-cta:hover,
+.button-raspberry:hover {
+  background: #ccc !important;
+  color: #000 !important;
+}
+
+/* Text links */
+.text-link,
+.text-link span,
+.tile-caption > button,
+.other-categories button,
+.service-row > button {
+  color: #fff !important;
+}
+
+/* Form fields */
+.appointment-form label,
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  border-bottom-color: #555 !important;
+  color-scheme: dark;
+}
+
+.appointment-form input::placeholder,
+.appointment-form textarea::placeholder {
+  color: #aaa !important;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: #fff !important;
+  box-shadow: 0 1px #fff !important;
+}
+
+/* Appointment feedback */
+.form-confirmation {
+  background: #171717 !important;
+  color: #fff !important;
+  border-left-color: #fff !important;
+}
+
+.form-error,
+.form-privacy,
+.service-note,
+.experience-note,
+.section-heading > p,
+.experience-copy > p,
+.occasion-copy > p,
+.appointment-copy > p,
+.faq-title > p,
+.service-row p,
+.service-intro > p {
+  color: #ccc !important;
+}
+
+/* Mobile navigation */
+.menu-toggle {
+  background: #000 !important;
+  border-color: #555 !important;
+}
+
+.menu-toggle span {
+  background: #fff !important;
+}
+
+@media (max-width: 760px) {
+  .nav-links {
+    background: #000 !important;
+    border-color: #333 !important;
+  }
+
+  .nav-links > a {
+    color: #fff !important;
+    border-color: #333 !important;
+  }
+}
+
+/* Gallery lightbox */
+.lightbox {
+  background: rgba(0, 0, 0, 0.97) !important;
+}
+
+.lightbox figcaption,
+.lightbox button {
+  color: #fff;
+}
+
+/* Accessible keyboard focus */
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid #fff !important;
+  outline-offset: 3px;
+}
+
+/* =====================================
+   VISIBILITY & CONTRAST FIX
+   ===================================== */
+
+/* Make all section headings clearly visible */
+.section-heading h2,
+.section-heading h2 em,
+.experience-copy h2,
+.experience-copy h2 em,
+.service-heading h2,
+.service-heading h2 em,
+.occasion-copy h2,
+.occasion-copy h2 em,
+.why-title h2,
+.why-title h2 em,
+.appointment-copy h2,
+.appointment-copy h2 em,
+.faq-title h2,
+.faq-title h2 em {
+  color: #FFFFFF !important;
+}
+
+/* Fix navigation contrast */
+.site-header .wordmark,
+.site-header .brand-name,
+.site-header .brand-name b,
+.site-header .nav-links > a {
+  color: #FFFFFF !important;
+}
+
+.site-header {
+  background: #000000 !important;
+  border-bottom-color: #333333 !important;
+}
+
+/* Improve supporting text readability */
+.section-heading > p,
+.experience-copy > p,
+.service-heading > p,
+.service-intro > p,
+.service-row p,
+.occasion-copy > p,
+.why-list p,
+.appointment-copy > p,
+.appointment-form label,
+.faq-title > p,
+.faq-list summary,
+.faq-list details > p {
+  color: #D0D0D0 !important;
+}
+
+/* Make small labels readable */
+.eyebrow,
+.eyebrow-light,
+.experience-note,
+.experience-note i,
+.occasion-labels,
+.tile-caption > span,
+.hero-caption,
+.hero-counter {
+  color: #FFFFFF !important;
+}
+
+/* Keep primary buttons visible */
+.button-raspberry {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+.button-raspberry:hover {
+  background: #DDDDDD !important;
+  color: #000000 !important;
+}
+
+/* Improve secondary links */
+.text-link,
+.text-link span,
+.hero-secondary,
+.tile-caption > button,
+.other-categories button,
+.service-row > button {
+  color: #FFFFFF !important;
+}
+
+/* Refine the black-and-white layout */
+.experience-section,
+.category-section,
+.gallery-section,
+.appointment-section {
+  background: #000000 !important;
+}
+
+.services-section,
+.why-section,
+.faq-section {
+  background: #151515 !important;
+}
+
+/* Subtle dividers */
+.experience-note,
+.tile-caption,
+.other-categories,
+.service-browser,
+.service-intro,
+.service-row,
+.why-list,
+.why-list article,
+.faq-list details {
+  border-color: #383838 !important;
+}
+
+/* Keep form inputs readable */
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  color: #FFFFFF !important;
+  background: #000000 !important;
+  border-bottom-color: #666666 !important;
+}
+
+.appointment-form input::placeholder,
+.appointment-form textarea::placeholder {
+  color: #AAAAAA !important;
+}
+
+/* HEADER CONTRAST FIX */
+.site-header .nav-links .nav-cta {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+}
+
+.site-header .nav-links .nav-cta span {
+  color: #000 !important;
+}
+
+.site-header .nav-links > a:not(.nav-cta) {
+  color: #f5f5f5 !important;
+}
+
+.site-header .brand-name,
+.site-header .brand-name b {
+  color: #fff !important;
+}
+
+/* GIVE THE HERO A MORE EDITORIAL COMPOSITION */
+.hero-section {
+  background: #050505;
+}
+
+.hero-copy {
+  width: min(490px, 43vw);
+  left: 8%;
+}
+
+.hero-copy h1 {
+  max-width: 470px;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -1.4px;
+}
+
+.hero-copy h1 em {
+  color: #d8d8d8 !important;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 420px;
+  color: #e0e0e0 !important;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  gap: 24px;
+}
+
+.hero-photo > img {
+  object-position: 60% center;
+}
+
+.hero-shade {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.48) 38%,
+    rgba(0, 0, 0, 0.05) 78%
+  );
+}
+
+/* CLEAR, CONSISTENT SUPPORTING TEXT */
+.section-heading > p,
+.experience-copy > p:not(.eyebrow),
+.occasion-copy > p:not(.eyebrow),
+.appointment-copy > p:not(.eyebrow) {
+  color: #c8c8c8 !important;
+}
+
+/* MOBILE */
+@media (max-width: 760px) {
+  .hero-copy {
+    left: 7%;
+    width: 86%;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(42px, 10vw, 58px);
+    line-height: 1.05;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    font-size: 12px;
+  }
+}
+
+/* ===== FINAL READABILITY FIXES ===== */
+
+/* Keep the existing black theme */
+.site-header,
+.nav-links,
+.nav-links.is-open {
+  background-color: #080808;
+}
+
+.category-section,
+.experience-section,
+.gallery-section,
+.appointment-section {
+  background-color: #000;
+}
+
+.services-section,
+.why-section,
+.faq-section {
+  background-color: #151515;
+}
+
+/* Make headings readable against dark backgrounds */
+.section-heading h2,
+.experience-copy h2,
+.service-heading h2,
+.occasion-copy h2,
+.why-title h2,
+.appointment-copy h2,
+.faq-title h2,
+.tile-caption h3,
+.service-intro h3,
+.service-row h4 {
+  color: #f5f1ed;
+}
+
+/* Keep paragraph text readable */
+.section-heading > p,
+.experience-copy > p:not(.eyebrow),
+.service-heading > p,
+.service-intro > p,
+.service-row p,
+.occasion-copy > p:not(.eyebrow),
+.why-list p,
+.appointment-copy > p:not(.eyebrow),
+.faq-title > p,
+.faq-list details > p {
+  color: #d0cbc5;
+}
+
+/* Preserve subtle accents */
+.section-heading h2 em,
+.experience-copy h2 em,
+.service-heading h2 em,
+.occasion-copy h2 em,
+.why-title h2 em,
+.appointment-copy h2 em,
+.faq-title h2 em {
+  color: #d6b0b4;
+}
+
+/* Improve contrast in the service selector */
+.category-filter {
+  color: #eee8e2;
+}
+
+.category-filter.active,
+.category-filter:hover {
+  color: #e4c1c5;
+}
+
+/* Keep form fields readable */
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  color: #fff;
+  color-scheme: dark;
+}
+
+.appointment-form input::placeholder,
+.appointment-form textarea::placeholder {
+  color: #aaa39c;
+}
+
+/* Preserve the existing images */
+.hero-photo > img,
+.tile-image img,
+.experience-photo img,
+.occasion-photo img,
+.gallery-tile img {
+  /* Keep all existing image settings unchanged */
+}
+
+/* ===== BEAUTY ZONE — FINAL DESIGN FIX ===== */
+
+:root {
+  --serif: "Lora", Georgia, serif;
+  --sans: "Lato", Arial, sans-serif;
+  --charcoal: #100e0e;
+  --raspberry: #8f344d;
+  --warm-white: #faf8f5;
+  --lavender: #f2edef;
+}
+
+/* Header */
+.site-header {
+  background: #080707;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.site-header .wordmark,
+.site-header .brand-name,
+.site-header .brand-name b {
+  color: #fff;
+}
+
+.site-header .nav-links > a {
+  color: #f4efed;
+  transition: color 0.2s ease;
+}
+
+.site-header .nav-links > a:hover {
+  color: #d7a6a6;
+}
+
+.site-header .nav-links .nav-cta {
+  background: #faf7f2;
+  border-color: #faf7f2;
+  color: #171313;
+}
+
+.site-header .nav-links .nav-cta:hover {
+  background: #d7b8ac;
+  border-color: #d7b8ac;
+  color: #171313;
+}
+
+.menu-toggle {
+  border-color: #62585a;
+}
+
+.menu-toggle span {
+  background: #fff;
+}
+
+/* Buttons — fix invalid transition syntax */
+.button {
+  transition: background 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.button-raspberry {
+  background: #171313;
+  color: #fff;
+}
+
+.button-raspberry:hover {
+  background: #713047;
+  transform: translateY(-1px);
+}
+
+/* Hero — retain the existing photo */
+.hero-section {
+  background: #171313;
+}
+
+.hero-photo > img {
+  object-position: center 36%;
+}
+
+.hero-shade {
+  background: linear-gradient(
+    90deg,
+    rgba(12, 10, 10, 0.80) 0%,
+    rgba(18, 13, 14, 0.62) 36%,
+    rgba(18, 13, 14, 0.18) 72%,
+    rgba(18, 13, 14, 0.05) 100%
+  );
+}
+
+.hero-copy h1 {
+  line-height: 1.04;
+  letter-spacing: -1.5px;
+}
+
+.hero-copy h1 em {
+  color: #ead6d4;
+  font-weight: 400;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 440px;
+  line-height: 1.85;
+}
+
+/* Section backgrounds and headings */
+.category-section,
+.gallery-section {
+  background: #faf8f5;
+}
+
+.experience-section,
+.appointment-section,
+.site-footer {
+  background: #fff;
+}
+
+.services-section,
+.why-section {
+  background: #f2edef;
+}
+
+.section-heading h2 em,
+.experience-copy h2 em,
+.service-heading h2 em,
+.occasion-copy h2 em,
+.why-title h2 em,
+.appointment-copy h2 em,
+.faq-title h2 em {
+  color: #8f344d;
+}
+
+/* Natural, restrained image styling */
+.tile-image img,
+.experience-photo img,
+.occasion-photo img,
+.gallery-tile img {
+  transition: transform 0.35s ease;
+}
+
+.tile-image:hover img,
+.gallery-tile:hover img {
+  transform: scale(1.02);
+}
+
+/* Cleaner spacing and readability */
+.category-section,
+.gallery-section {
+  padding-top: 78px;
+  padding-bottom: 82px;
+}
+
+.experience-section {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.site-footer {
+  border-top: 1px solid #e8e1df;
+}
+
+/* Mobile fixes */
+@media (max-width: 760px) {
+  .site-header .nav-links {
+    background: #100e0e;
+    border-bottom-color: #383031;
+  }
+
+  .site-header .nav-links > a {
+    border-bottom-color: #30292a;
+  }
+
+  .site-header .nav-links .nav-cta {
+    background: #faf7f2;
+    color: #171313;
+  }
+
+  .hero-copy h1 {
+    line-height: 1.02;
+  }
+}
+
+/* Reduce the top header height */
+.announcement {
+  height: 22px !important;
+  min-height: 22px !important;
+  padding: 0 !important;
+}
+
+.site-header {
+  height: 68px !important;
+  min-height: 68px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove unwanted gap before the hero */
+.hero-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Preserve the existing headline size */
+.hero-copy h1 {
+  font-size: clamp(58px, 5.4vw, 82px) !important;
+}
+
+/* Mobile header */
+@media (max-width: 760px) {
+  .announcement {
+    height: 22px !important;
+    min-height: 22px !important;
+  }
+
+  .site-header {
+    height: 64px !important;
+    min-height: 64px !important;
+  }
+}
+
+/* Extra-compact header */
+.announcement {
+  height: 16px !important;
+  min-height: 16px !important;
+  padding: 0 !important;
+  line-height: 16px !important;
+}
+
+.site-header {
+  height: 52px !important;
+  min-height: 52px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+/* Keep logo and navigation aligned */
+.site-header .wordmark {
+  margin: 0 !important;
+}
+
+.site-header .nav-links > a {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.site-header .nav-links .nav-cta {
+  min-height: 38px !important;
+}
+
+/* Remove any gap before the hero */
+.hero-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Preserve headline size */
+.hero-copy h1 {
+  font-size: clamp(58px, 5.4vw, 82px) !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .announcement {
+    height: 16px !important;
+    min-height: 16px !important;
+  }
+
+  .site-header {
+    height: 56px !important;
+    min-height: 56px !important;
+  }
+
+  .site-header .nav-links {
+    top: 56px !important;
+  }
+}
+
+/* Improved website header typography */
+.site-header {
+  min-height: 100px;
+  padding: 22px 7.5%;
+  gap: 36px;
+}
+
+.brand-name {
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.brand-name b {
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+.nav-links {
+  gap: 34px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.nav-links .nav-cta {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  padding: 20px 26px;
+}
+
+/* Keep the header comfortable on smaller screens */
+@media (max-width: 900px) {
+  .site-header {
+    padding: 18px 5%;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .brand-name {
+    font-size: 21px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+/* Refined, balanced header */
+.site-header {
+  min-height: 76px;
+  padding: 14px 7.5%;
+  gap: 24px;
+}
+
+.brand-name {
+  font-size: 21px;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.brand-name b {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  margin-top: 4px;
+}
+
+.nav-links {
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+}
+
+.nav-links .nav-cta {
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 16px 20px;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding: 14px 5%;
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+}
+
+/* Modern luxury beauty typography */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.section-heading h2,
+.tile-caption h3,
+.service-intro h3 {
+  letter-spacing: -0.5px;
+}
+
+.eyebrow,
+.tile-caption > span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+
+/* Clean, modern typography across the website */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-name,
+h1 em,
+h2 em {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+h1 em,
+h2 em {
+  font-weight: 700;
+}
+
+.brand-name b {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Fix excessive gap between category and experience sections */
+.category-section {
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 25px !important;
+}
+
+.other-categories {
+  margin-bottom: 0 !important;
+}
+
+.experience-section {
+  height: auto !important;
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 40px !important;
+}
+
+/* Improve readability in the Services section */
+.category-filter {
+  font-size: 13px;
+}
+
+.category-filter > span {
+  font-size: 12px;
+}
+
+.service-intro h3 {
+  font-size: clamp(26px, 2.6vw, 34px);
+}
+
+.service-intro > div > span {
+  font-size: 9px;
+}
+
+.service-intro > p {
+  font-size: 12px;
+}
+
+.service-row h4 {
+  font-size: 15px;
+}
+
+.service-row p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.service-row > button {
+  font-size: 10px;
+}
+
+.service-number {
+  font-size: 12px;
+}
+
+.service-note {
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .category-filter {
+    font-size: 11px;
+  }
+
+  .service-intro h3 {
+    font-size: 26px;
+  }
+
+  .service-row h4 {
+    font-size: 14px;
+  }
+
+  .service-row p {
+    font-size: 11px;
+  }
+
+  .service-row > button {
+    font-size: 9px;
+  }
+}
+
+/* Make the appointment form easier to read */
+.appointment-copy > p:not(.eyebrow) {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.appointment-form {
+  gap: 24px;
+}
+
+.appointment-form label {
+  font-size: 12px;
+  gap: 9px;
+}
+
+.appointment-form label small {
+  font-size: 10px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  font-size: 14px;
+  padding: 12px 3px;
+}
+
+.appointment-form textarea {
+  min-height: 85px;
+}
+
+.appointment-form > .button {
+  font-size: 11px;
+  padding: 17px 25px;
+}
+
+.form-error,
+.form-confirmation {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.form-privacy {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .appointment-copy > p:not(.eyebrow) {
+    font-size: 13px;
+  }
+
+  .appointment-form label {
+    font-size: 12px;
+  }
+
+  .appointment-form input,
+  .appointment-form select,
+  .appointment-form textarea {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+

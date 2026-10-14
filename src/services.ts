@@ -1,40 +1,44 @@
-export type ServiceCategory = 'Hair' | 'Skin' | 'Nails' | 'Bridal & Makeup' | 'Waxing & Threading' | 'Spa & Wellness' | 'Special Services'
-
+export type ServiceCategory = 'Skin & Facials' | 'Hair & Styling' | 'Nails & Feet' | 'Bridal & Makeup' | 'Body Care & Wellness' | 'At-Home Beauty'
 export type SalonService = { name: string; category: ServiceCategory; description: string }
 
-export const categories: ServiceCategory[] = ['Hair', 'Skin', 'Nails', 'Bridal & Makeup', 'Waxing & Threading', 'Spa & Wellness', 'Special Services']
+export const categories: ServiceCategory[] = ['Skin & Facials', 'Hair & Styling', 'Nails & Feet', 'Bridal & Makeup', 'Body Care & Wellness', 'At-Home Beauty']
 
 export const services: SalonService[] = [
-  { name: 'Eyebrow Threading', category: 'Waxing & Threading', description: 'A considered shape, finished with a light hand.' },
-  { name: 'Tanning', category: 'Skin', description: 'A sun-kissed look, tailored to your preference.' },
-  { name: 'Skincare', category: 'Skin', description: 'Thoughtful care shaped around your skin’s needs.' },
+  { name: 'Eyebrow Threading', category: 'Body Care & Wellness', description: 'A considered shape, finished with a light hand.' },
+  { name: 'Tanning', category: 'Skin & Facials', description: 'A tanning service tailored to your preference.' },
+  { name: 'Skincare', category: 'Skin & Facials', description: 'Thoughtful care shaped around your skin and routine.' },
   { name: 'Bridal Services', category: 'Bridal & Makeup', description: 'Beauty preparation for the moments you’ll remember.' },
-  { name: 'Pedicure', category: 'Nails', description: 'A restorative foot treatment with neat, polished finish.' },
-  { name: 'Facials', category: 'Skin', description: 'A moment to refresh, restore and care for your skin.' },
-  { name: 'Haircuts & Blowouts', category: 'Hair', description: 'A fresh shape and a smooth, beautifully finished style.' },
-  { name: 'Hair Extensions', category: 'Hair', description: 'Added length and fullness, chosen to suit your look.' },
-  { name: 'Body Waxing', category: 'Waxing & Threading', description: 'Careful, considered hair removal for smooth skin.' },
-  { name: 'Massage', category: 'Spa & Wellness', description: 'Time to slow down and give yourself a little care.' },
-  { name: 'Acne Treatments', category: 'Skin', description: 'A gentle, attentive approach to blemish-prone skin.' },
+  { name: 'Pedicure', category: 'Nails & Feet', description: 'Foot care with time for a little refresh.' },
+  { name: 'Facials', category: 'Skin & Facials', description: 'A moment to refresh and care for your skin.' },
+  { name: 'Haircuts & Blowouts', category: 'Hair & Styling', description: 'A fresh shape and a smooth, finished style.' },
+  { name: 'Hair Extensions', category: 'Hair & Styling', description: 'Added length or fullness chosen to suit your look.' },
+  { name: 'Body Waxing', category: 'Body Care & Wellness', description: 'Careful hair removal for smooth skin.' },
+  { name: 'Massage', category: 'Body Care & Wellness', description: 'Time to slow down and make space for yourself.' },
+  { name: 'Acne Treatments', category: 'Skin & Facials', description: 'An attentive approach to blemish-prone skin.' },
   { name: 'Makeup Services', category: 'Bridal & Makeup', description: 'Makeup for celebrations, events and everyday moments.' },
-  { name: 'Manicure', category: 'Nails', description: 'Nail and hand care finished with a touch of polish.' },
-  { name: 'Mobile Salon Services', category: 'Special Services', description: 'Ask about beauty services arranged at your location.' },
+  { name: 'Manicure', category: 'Nails & Feet', description: 'Hand and nail care with a neat, polished finish.' },
+  { name: 'Mobile Salon Services', category: 'At-Home Beauty', description: 'Ask about arranging selected beauty services at your location.' },
   { name: 'Wedding & Event Preparation', category: 'Bridal & Makeup', description: 'A considered beauty plan for your special occasion.' },
-  { name: 'Shampoo & Conditioning', category: 'Hair', description: 'A refreshing wash and conditioning ritual for your hair.' },
-  { name: 'Spa Services', category: 'Spa & Wellness', description: 'A relaxing pause with care for body and mind.' },
-  { name: 'Hairstyling', category: 'Hair', description: 'An occasion-ready finish or a style for the everyday.' },
+  { name: 'Shampoo & Conditioning', category: 'Hair & Styling', description: 'A refreshing wash and conditioning ritual.' },
+  { name: 'Spa Services', category: 'Body Care & Wellness', description: 'A relaxing pause with care for body and mind.' },
+  { name: 'Hairstyling', category: 'Hair & Styling', description: 'An occasion-ready finish or a style for every day.' },
 ]
 
+const image = (id: string, width: number) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`
+
 export const photos = {
-  hero: { src: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=85', alt: 'Warm, thoughtfully arranged beauty salon interior' },
-  about: { src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1100&q=85', alt: 'Stylist carefully working on a client’s hair' },
-  bridal: { src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1400&q=85', alt: 'Bridal makeup and styling inspiration' },
+  hero: { src: image('photo-1487412947147-5cebf100ffc2', 1800), alt: 'Beauty portrait with natural makeup and softly styled hair' },
+  skinTile: { src: image('photo-1570172619644-dfd03ed5d881', 950), alt: 'Client receiving a professional facial treatment' },
+  hairTile: { src: image('photo-1522337360788-8b13dee7a37e', 950), alt: 'Long hair being styled with a natural finish' },
+  bridalTile: { src: image('photo-1599029575302-290d8f461dc9', 950), alt: 'Bridal beauty inspiration with soft makeup and a veil' },
+  experience: { src: image('photo-1560066984-138dadb4c035', 1100), alt: 'Stylist working with a client in a bright salon' },
+  occasion: { src: image('photo-1599029575302-290d8f461dc9', 1200), alt: 'Bridal beauty portrait with softly finished makeup and a veil' },
   gallery: [
-    { src: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=850&q=85', alt: 'Soft bridal makeup inspiration' },
-    { src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=850&q=85', alt: 'Hair styling in a salon' },
-    { src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=850&q=85', alt: 'A neat manicure with a warm neutral polish' },
-    { src: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=850&q=85', alt: 'A calming facial skincare treatment' },
-    { src: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=850&q=85', alt: 'A finished, softly styled haircut' },
-    { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=850&q=85', alt: 'A serene spa and wellness setting' },
+    { src: '/images/skin-spa-care.png', alt: 'A relaxing facial treatment in a beauty spa', label: 'Skin & spa care' },
+    { src: '/images/nail-care.png', alt: 'Manicure in progress with soft pink nail polish', label: 'Nail care' },
+    { src: '/images/makeup-artistry.png', alt: 'Makeup artist applying eye makeup in a beauty salon', label: 'Makeup artistry' },
+    { src: '/images/pedicure.png', alt: 'Pedicure treatment with soft pink nail polish in a beauty salon', label: 'Body care' },
+    { src: '/images/hair-styling2.png', alt: 'Editorial hairstyling with a softly finished look', label: 'Hair & styling' },
+    { src: '/images/special-occasions.png', alt: 'An elegant wedding celebration detail', label: 'Special occasions' },
   ],
 }

@@ -1,3 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-:root{font-family:'DM Sans',Arial,sans-serif;--sans:'DM Sans',Arial,sans-serif;--serif:'Playfair Display',Georgia,serif;color:#302724;background:#f3ede4;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-optical-sizing:auto;font-weight:400;scroll-behavior:smooth}*{box-sizing:border-box}html{min-width:320px;scroll-padding-top:86px}body{margin:0;min-width:320px}#root{width:100%;margin:0 auto}button,input,select,textarea{font:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #a98259;outline-offset:3px}::selection{background:#a98259;color:#251916}
-@media(max-width:760px){html{scroll-padding-top:72px}}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+:root {
+  font-family: 'Lato', Arial, sans-serif;
+
+  --sans: 'Lato', Arial, sans-serif;
+  --serif: 'Lora', Georgia, serif;
+
+  --raspberry: #9a4b55;
+  --lavender: #f3ebeb;
+  --warm-white: #faf7f3;
+  --charcoal: #21191a;
+  --muted: #817576;
+
+  --peach: #f5c3b7;
+  --peach-light: #f9d5cb;
+  --black: #080707;
+  --border: #e6dcd8;
+
+  color: var(--charcoal);
+  background: var(--warm-white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-padding-top: 80px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--peach);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--peach);
+  color: var(--black);
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 69px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
